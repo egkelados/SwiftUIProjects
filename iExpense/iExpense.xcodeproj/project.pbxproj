@@ -12,6 +12,7 @@
 		0834E13C2C92C0A500CDA869 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0834E13B2C92C0A500CDA869 /* Assets.xcassets */; };
 		0834E13F2C92C0A500CDA869 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0834E13E2C92C0A500CDA869 /* Preview Assets.xcassets */; };
 		085CB6872C941788009985AC /* ShowHideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085CB6862C941788009985AC /* ShowHideView.swift */; };
+		085CB6892C941DAB009985AC /* OnDeleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085CB6882C941DAB009985AC /* OnDeleteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		0834E13B2C92C0A500CDA869 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0834E13E2C92C0A500CDA869 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		085CB6862C941788009985AC /* ShowHideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowHideView.swift; sourceTree = "<group>"; };
+		085CB6882C941DAB009985AC /* OnDeleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnDeleteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				0834E1372C92C0A400CDA869 /* iExpenseApp.swift */,
 				0834E1392C92C0A400CDA869 /* ContentView.swift */,
 				085CB6862C941788009985AC /* ShowHideView.swift */,
+				085CB6882C941DAB009985AC /* OnDeleteView.swift */,
 				0834E13B2C92C0A500CDA869 /* Assets.xcassets */,
 				0834E13D2C92C0A500CDA869 /* Preview Content */,
 			);
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				085CB6892C941DAB009985AC /* OnDeleteView.swift in Sources */,
 				085CB6872C941788009985AC /* ShowHideView.swift in Sources */,
 				0834E13A2C92C0A400CDA869 /* ContentView.swift in Sources */,
 				0834E1382C92C0A400CDA869 /* iExpenseApp.swift in Sources */,
