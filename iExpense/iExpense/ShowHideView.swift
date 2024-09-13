@@ -7,9 +7,40 @@
 
 import SwiftUI
 
-struct ShowHideView: View {
+struct SecondView: View {
+    @Environment(\.dismiss) var dismiss
+    let name: String
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Color.green
+                .ignoresSafeArea()
+            VStack(alignment: /*@START_MENU_TOKEN@*/ .center/*@END_MENU_TOKEN@*/, spacing: 50) {
+                Text("Hello \(name)")
+                    .font(.system(size: 25))
+                Divider()
+                Button("Dismiss") {
+                    dismiss()
+                }
+                .padding(5)
+                .font(.system(size: 25).bold())
+//                .frame(width:155, height: 125)
+                .background(.gray)
+                .clipShape(RoundedRectangle(cornerRadius: 15))
+            }
+            .padding()
+        }
+    }
+}
+
+struct ShowHideView: View {
+    @State private var showingSheet = false
+    var body: some View {
+        Button("Show sheet") {
+            showingSheet.toggle()
+        }
+        .sheet(isPresented: $showingSheet, content: {
+            SecondView(name: "Boy")
+        })
     }
 }
 
