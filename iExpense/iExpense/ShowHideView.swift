@@ -14,7 +14,7 @@ struct SecondView: View {
         ZStack {
             Color.green
                 .ignoresSafeArea()
-            VStack(alignment: /*@START_MENU_TOKEN@*/ .center/*@END_MENU_TOKEN@*/, spacing: 50) {
+            VStack(alignment:  .center, spacing: 50) {
                 Text("Hello \(name)")
                     .font(.system(size: 25))
                 Divider()
