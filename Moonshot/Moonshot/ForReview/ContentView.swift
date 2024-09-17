@@ -6,6 +6,7 @@
 //
 
 // TODO: Create a custom modifier for the image...?
+
 import SwiftUI
 
 struct ContentView: View {
