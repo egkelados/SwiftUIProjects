@@ -16,6 +16,7 @@
 		085CB68B2C9425D2009985AC /* Appstorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085CB68A2C9425D2009985AC /* Appstorage.swift */; };
 		0877D3382C980493000B45A2 /* UserDefaultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0877D3372C980493000B45A2 /* UserDefaultsView.swift */; };
 		0877D33A2C980981000B45A2 /* ActualAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0877D3392C980981000B45A2 /* ActualAppView.swift */; };
+		08A8CFEE2C98B71A0085056F /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A8CFED2C98B71A0085056F /* AddView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		085CB68A2C9425D2009985AC /* Appstorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appstorage.swift; sourceTree = "<group>"; };
 		0877D3372C980493000B45A2 /* UserDefaultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsView.swift; sourceTree = "<group>"; };
 		0877D3392C980981000B45A2 /* ActualAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualAppView.swift; sourceTree = "<group>"; };
+		08A8CFED2C98B71A0085056F /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,12 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				0834E1372C92C0A400CDA869 /* iExpenseApp.swift */,
-				0834E1392C92C0A400CDA869 /* ContentView.swift */,
-				085CB6862C941788009985AC /* ShowHideView.swift */,
-				085CB6882C941DAB009985AC /* OnDeleteView.swift */,
-				085CB68A2C9425D2009985AC /* Appstorage.swift */,
-				0877D3372C980493000B45A2 /* UserDefaultsView.swift */,
+				08A8CFEF2C98B7240085056F /* ForReview */,
 				0877D3392C980981000B45A2 /* ActualAppView.swift */,
+				08A8CFED2C98B71A0085056F /* AddView.swift */,
 				0834E13B2C92C0A500CDA869 /* Assets.xcassets */,
 				0834E13D2C92C0A500CDA869 /* Preview Content */,
 			);
@@ -80,6 +79,18 @@
 				0834E13E2C92C0A500CDA869 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		08A8CFEF2C98B7240085056F /* ForReview */ = {
+			isa = PBXGroup;
+			children = (
+				0834E1392C92C0A400CDA869 /* ContentView.swift */,
+				085CB6862C941788009985AC /* ShowHideView.swift */,
+				085CB6882C941DAB009985AC /* OnDeleteView.swift */,
+				085CB68A2C9425D2009985AC /* Appstorage.swift */,
+				0877D3372C980493000B45A2 /* UserDefaultsView.swift */,
+			);
+			path = ForReview;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +167,7 @@
 				085CB6892C941DAB009985AC /* OnDeleteView.swift in Sources */,
 				085CB6872C941788009985AC /* ShowHideView.swift in Sources */,
 				0877D33A2C980981000B45A2 /* ActualAppView.swift in Sources */,
+				08A8CFEE2C98B71A0085056F /* AddView.swift in Sources */,
 				0877D3382C980493000B45A2 /* UserDefaultsView.swift in Sources */,
 				0834E13A2C92C0A400CDA869 /* ContentView.swift in Sources */,
 				0834E1382C92C0A400CDA869 /* iExpenseApp.swift in Sources */,
