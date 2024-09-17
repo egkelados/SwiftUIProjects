@@ -14,6 +14,7 @@
 		08C6CBB42C9970E800DC4067 /* ScrollingDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C6CBB32C9970E800DC4067 /* ScrollingDataView.swift */; };
 		08C6CBB62C9975F400DC4067 /* NavigLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C6CBB52C9975F400DC4067 /* NavigLinkView.swift */; };
 		08C6CBB82C9978FD00DC4067 /* CodableProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C6CBB72C9978FD00DC4067 /* CodableProtocolView.swift */; };
+		08C6CBBA2C997E9A00DC4067 /* ScrollingGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C6CBB92C997E9A00DC4067 /* ScrollingGridView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		08C6CBB32C9970E800DC4067 /* ScrollingDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingDataView.swift; sourceTree = "<group>"; };
 		08C6CBB52C9975F400DC4067 /* NavigLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigLinkView.swift; sourceTree = "<group>"; };
 		08C6CBB72C9978FD00DC4067 /* CodableProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableProtocolView.swift; sourceTree = "<group>"; };
+		08C6CBB92C997E9A00DC4067 /* ScrollingGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingGridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				08C6CBB32C9970E800DC4067 /* ScrollingDataView.swift */,
 				08C6CBB52C9975F400DC4067 /* NavigLinkView.swift */,
 				08C6CBB72C9978FD00DC4067 /* CodableProtocolView.swift */,
+				08C6CBB92C997E9A00DC4067 /* ScrollingGridView.swift */,
 			);
 			path = ForReview;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 				08A8D00B2C996F2B0085056F /* ContentView.swift in Sources */,
 				08C6CBB42C9970E800DC4067 /* ScrollingDataView.swift in Sources */,
 				08C6CBB82C9978FD00DC4067 /* CodableProtocolView.swift in Sources */,
+				08C6CBBA2C997E9A00DC4067 /* ScrollingGridView.swift in Sources */,
 				08A8CFFD2C9966D70085056F /* MoonshotApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
