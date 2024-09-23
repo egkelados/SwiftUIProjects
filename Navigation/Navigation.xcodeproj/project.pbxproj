@@ -13,6 +13,7 @@
 		086B5D242C9C0E9D00ACF976 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 086B5D232C9C0E9D00ACF976 /* Preview Assets.xcassets */; };
 		086B5D2B2C9C192800ACF976 /* students.json in Sources */ = {isa = PBXBuildFile; fileRef = 086B5D2A2C9C192800ACF976 /* students.json */; };
 		089266382CA13ACE00D2DB22 /* NavigationProgrammaticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089266372CA13ACE00D2DB22 /* NavigationProgrammaticView.swift */; };
+		0892663A2CA13E5600D2DB22 /* NavigationPathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089266392CA13E5600D2DB22 /* NavigationPathView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		086B5D232C9C0E9D00ACF976 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		086B5D2A2C9C192800ACF976 /* students.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = students.json; sourceTree = "<group>"; };
 		089266372CA13ACE00D2DB22 /* NavigationProgrammaticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationProgrammaticView.swift; sourceTree = "<group>"; };
+		089266392CA13E5600D2DB22 /* NavigationPathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPathView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				086B5D1E2C9C0E9C00ACF976 /* ContentView.swift */,
 				089266372CA13ACE00D2DB22 /* NavigationProgrammaticView.swift */,
+				089266392CA13E5600D2DB22 /* NavigationPathView.swift */,
 			);
 			path = Preview;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				089266382CA13ACE00D2DB22 /* NavigationProgrammaticView.swift in Sources */,
+				0892663A2CA13E5600D2DB22 /* NavigationPathView.swift in Sources */,
 				086B5D1F2C9C0E9C00ACF976 /* ContentView.swift in Sources */,
 				086B5D1D2C9C0E9C00ACF976 /* NavigationApp.swift in Sources */,
 				086B5D2B2C9C192800ACF976 /* students.json in Sources */,
