@@ -14,6 +14,10 @@
 		086B5D2B2C9C192800ACF976 /* students.json in Sources */ = {isa = PBXBuildFile; fileRef = 086B5D2A2C9C192800ACF976 /* students.json */; };
 		089266382CA13ACE00D2DB22 /* NavigationProgrammaticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089266372CA13ACE00D2DB22 /* NavigationProgrammaticView.swift */; };
 		0892663A2CA13E5600D2DB22 /* NavigationPathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089266392CA13E5600D2DB22 /* NavigationPathView.swift */; };
+		0892663C2CA1442100D2DB22 /* ReturnToRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0892663B2CA1442100D2DB22 /* ReturnToRootView.swift */; };
+		0892663E2CA1581C00D2DB22 /* NavBarAppearenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0892663D2CA1581C00D2DB22 /* NavBarAppearenceView.swift */; };
+		089266402CA15D7F00D2DB22 /* ToolBarButtonsLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0892663F2CA15D7F00D2DB22 /* ToolBarButtonsLocationView.swift */; };
+		089266442CA1643900D2DB22 /* EditNavigationTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089266432CA1643900D2DB22 /* EditNavigationTitleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +29,10 @@
 		086B5D2A2C9C192800ACF976 /* students.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = students.json; sourceTree = "<group>"; };
 		089266372CA13ACE00D2DB22 /* NavigationProgrammaticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationProgrammaticView.swift; sourceTree = "<group>"; };
 		089266392CA13E5600D2DB22 /* NavigationPathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPathView.swift; sourceTree = "<group>"; };
+		0892663B2CA1442100D2DB22 /* ReturnToRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnToRootView.swift; sourceTree = "<group>"; };
+		0892663D2CA1581C00D2DB22 /* NavBarAppearenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarAppearenceView.swift; sourceTree = "<group>"; };
+		0892663F2CA15D7F00D2DB22 /* ToolBarButtonsLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarButtonsLocationView.swift; sourceTree = "<group>"; };
+		089266432CA1643900D2DB22 /* EditNavigationTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNavigationTitleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +88,10 @@
 				086B5D1E2C9C0E9C00ACF976 /* ContentView.swift */,
 				089266372CA13ACE00D2DB22 /* NavigationProgrammaticView.swift */,
 				089266392CA13E5600D2DB22 /* NavigationPathView.swift */,
+				0892663B2CA1442100D2DB22 /* ReturnToRootView.swift */,
+				0892663D2CA1581C00D2DB22 /* NavBarAppearenceView.swift */,
+				0892663F2CA15D7F00D2DB22 /* ToolBarButtonsLocationView.swift */,
+				089266432CA1643900D2DB22 /* EditNavigationTitleView.swift */,
 			);
 			path = Preview;
 			sourceTree = "<group>";
@@ -156,9 +168,13 @@
 			files = (
 				089266382CA13ACE00D2DB22 /* NavigationProgrammaticView.swift in Sources */,
 				0892663A2CA13E5600D2DB22 /* NavigationPathView.swift in Sources */,
+				089266402CA15D7F00D2DB22 /* ToolBarButtonsLocationView.swift in Sources */,
 				086B5D1F2C9C0E9C00ACF976 /* ContentView.swift in Sources */,
+				0892663E2CA1581C00D2DB22 /* NavBarAppearenceView.swift in Sources */,
+				0892663C2CA1442100D2DB22 /* ReturnToRootView.swift in Sources */,
 				086B5D1D2C9C0E9C00ACF976 /* NavigationApp.swift in Sources */,
 				086B5D2B2C9C192800ACF976 /* students.json in Sources */,
+				089266442CA1643900D2DB22 /* EditNavigationTitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
