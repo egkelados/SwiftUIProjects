@@ -15,6 +15,9 @@
 		08102AB52CA55F170026E2FF /* ValidateDisableFormsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08102AB42CA55F170026E2FF /* ValidateDisableFormsView.swift */; };
 		08102AB72CA5E7910026E2FF /* ObservableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08102AB62CA5E7910026E2FF /* ObservableView.swift */; };
 		08102AB92CA6842B0026E2FF /* HapticEffectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08102AB82CA6842B0026E2FF /* HapticEffectsView.swift */; };
+		08102ABB2CA69C450026E2FF /* ActualAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08102ABA2CA69C450026E2FF /* ActualAppView.swift */; };
+		08102ABD2CA69C850026E2FF /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08102ABC2CA69C850026E2FF /* Order.swift */; };
+		08102ABF2CA6AB5B0026E2FF /* AdressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08102ABE2CA6AB5B0026E2FF /* AdressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		08102AB42CA55F170026E2FF /* ValidateDisableFormsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateDisableFormsView.swift; sourceTree = "<group>"; };
 		08102AB62CA5E7910026E2FF /* ObservableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableView.swift; sourceTree = "<group>"; };
 		08102AB82CA6842B0026E2FF /* HapticEffectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticEffectsView.swift; sourceTree = "<group>"; };
+		08102ABA2CA69C450026E2FF /* ActualAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualAppView.swift; sourceTree = "<group>"; };
+		08102ABC2CA69C850026E2FF /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		08102ABE2CA6AB5B0026E2FF /* AdressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,9 @@
 			isa = PBXGroup;
 			children = (
 				08102AA32CA541C60026E2FF /* CupcakeCornerApp.swift */,
+				08102ABA2CA69C450026E2FF /* ActualAppView.swift */,
+				08102ABC2CA69C850026E2FF /* Order.swift */,
+				08102ABE2CA6AB5B0026E2FF /* AdressView.swift */,
 				08102AB12CA555EC0026E2FF /* ForReview */,
 				08102AA72CA541C70026E2FF /* Assets.xcassets */,
 				08102AA92CA541C70026E2FF /* Preview Content */,
@@ -159,7 +168,10 @@
 			files = (
 				08102AB72CA5E7910026E2FF /* ObservableView.swift in Sources */,
 				08102AA62CA541C60026E2FF /* ContentView.swift in Sources */,
+				08102ABD2CA69C850026E2FF /* Order.swift in Sources */,
 				08102AB92CA6842B0026E2FF /* HapticEffectsView.swift in Sources */,
+				08102ABB2CA69C450026E2FF /* ActualAppView.swift in Sources */,
+				08102ABF2CA6AB5B0026E2FF /* AdressView.swift in Sources */,
 				08102AB52CA55F170026E2FF /* ValidateDisableFormsView.swift in Sources */,
 				08102AB32CA5562C0026E2FF /* LoadImageView.swift in Sources */,
 				08102AA42CA541C60026E2FF /* CupcakeCornerApp.swift in Sources */,
