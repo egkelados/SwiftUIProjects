@@ -8,7 +8,7 @@
 import Foundation
 
 @Observable
-class Order {
+class Order: Codable {
     static let types = ["Vanilla", "Strawberry", "Chocolate", "Rainbow"]
 
     var type = 0
@@ -41,9 +41,9 @@ class Order {
 
     var cost: Decimal {
         var cost = Decimal(quantity) * 2.0
-        
+
         cost += Decimal(type) / 2
-        
+
         if addSprinkles {
             cost += 0.5
         }
@@ -52,5 +52,17 @@ class Order {
         }
 
         return cost
+    }
+
+    enum CodingKeys: String, CodingKey {
+        case _type = "type"
+        case _quantity = "quantity"
+        case _specialRequestEnabled = "specialRequestEnabled"
+        case _extraFrosting = "extraFrosting"
+        case _addSprinkles = "addSprinkles"
+        case _name = "name"
+        case _streetAddress = "streetAddress"
+        case _city = "city"
+        case _zip = "zip"
     }
 }
