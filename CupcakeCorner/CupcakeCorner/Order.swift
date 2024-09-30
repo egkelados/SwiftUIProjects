@@ -26,4 +26,31 @@ class Order {
     var extraFrosting = false
 
     var addSprinkles = false
+
+    var name = ""
+    var streetAddress = ""
+    var city = ""
+    var zip = ""
+
+    var isValid: Bool {
+        if name.isEmpty || streetAddress.isEmpty || city.isEmpty || zip.isEmpty {
+            return false
+        }
+        return true
+    }
+
+    var cost: Decimal {
+        var cost = Decimal(quantity) * 2.0
+        
+        cost += Decimal(type) / 2
+        
+        if addSprinkles {
+            cost += 0.5
+        }
+        if extraFrosting {
+            cost += 1
+        }
+
+        return cost
+    }
 }
