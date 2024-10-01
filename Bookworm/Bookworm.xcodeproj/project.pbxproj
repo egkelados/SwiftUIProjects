@@ -70,12 +70,8 @@
 			isa = PBXGroup;
 			children = (
 				081D2CD32CAAC62100E1D4BF /* BookwormApp.swift */,
-				08C1AF1E2CAB0BBA0020BA74 /* AddBookView.swift */,
-				08C1AF242CABE9EE0020BA74 /* DetailView.swift */,
-				08C1AF1A2CAB00770020BA74 /* ActualAppView.swift */,
-				08C1AF222CABE3830020BA74 /* EmojiRatingView.swift */,
-				08C1AF1C2CAB0AB60020BA74 /* Book.swift */,
-				08C1AF202CABD6F20020BA74 /* RatingView.swift */,
+				08C1AF262CAC169E0020BA74 /* Views */,
+				08C1AF272CAC16A80020BA74 /* Model */,
 				081D2CE12CAACD1300E1D4BF /* Review */,
 				081D2CD72CAAC62200E1D4BF /* Assets.xcassets */,
 				081D2CD92CAAC62200E1D4BF /* Preview Content */,
@@ -100,6 +96,26 @@
 				08C1AF182CAAE3C00020BA74 /* Student.swift */,
 			);
 			path = Review;
+			sourceTree = "<group>";
+		};
+		08C1AF262CAC169E0020BA74 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				08C1AF1E2CAB0BBA0020BA74 /* AddBookView.swift */,
+				08C1AF242CABE9EE0020BA74 /* DetailView.swift */,
+				08C1AF1A2CAB00770020BA74 /* ActualAppView.swift */,
+				08C1AF222CABE3830020BA74 /* EmojiRatingView.swift */,
+				08C1AF202CABD6F20020BA74 /* RatingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		08C1AF272CAC16A80020BA74 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				08C1AF1C2CAB0AB60020BA74 /* Book.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
