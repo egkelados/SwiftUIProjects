@@ -12,7 +12,7 @@ import SwiftUI
 struct SwftDataProjectApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PredicateView()
         }
         .modelContainer(for: User.self)
     }
