@@ -14,6 +14,12 @@
 		08C1AF152CAAD64B0020BA74 /* TextEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C1AF142CAAD64B0020BA74 /* TextEditorView.swift */; };
 		08C1AF172CAAE27F0020BA74 /* SwiftDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C1AF162CAAE27F0020BA74 /* SwiftDataView.swift */; };
 		08C1AF192CAAE3C00020BA74 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C1AF182CAAE3C00020BA74 /* Student.swift */; };
+		08C1AF1B2CAB00770020BA74 /* ActualAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C1AF1A2CAB00770020BA74 /* ActualAppView.swift */; };
+		08C1AF1D2CAB0AB60020BA74 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C1AF1C2CAB0AB60020BA74 /* Book.swift */; };
+		08C1AF1F2CAB0BBA0020BA74 /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C1AF1E2CAB0BBA0020BA74 /* AddBookView.swift */; };
+		08C1AF212CABD6F20020BA74 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C1AF202CABD6F20020BA74 /* RatingView.swift */; };
+		08C1AF232CABE3830020BA74 /* EmojiRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C1AF222CABE3830020BA74 /* EmojiRatingView.swift */; };
+		08C1AF252CABE9EE0020BA74 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C1AF242CABE9EE0020BA74 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +31,12 @@
 		08C1AF142CAAD64B0020BA74 /* TextEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditorView.swift; sourceTree = "<group>"; };
 		08C1AF162CAAE27F0020BA74 /* SwiftDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataView.swift; sourceTree = "<group>"; };
 		08C1AF182CAAE3C00020BA74 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		08C1AF1A2CAB00770020BA74 /* ActualAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualAppView.swift; sourceTree = "<group>"; };
+		08C1AF1C2CAB0AB60020BA74 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		08C1AF1E2CAB0BBA0020BA74 /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
+		08C1AF202CABD6F20020BA74 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		08C1AF222CABE3830020BA74 /* EmojiRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiRatingView.swift; sourceTree = "<group>"; };
+		08C1AF242CABE9EE0020BA74 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,12 @@
 			isa = PBXGroup;
 			children = (
 				081D2CD32CAAC62100E1D4BF /* BookwormApp.swift */,
+				08C1AF1E2CAB0BBA0020BA74 /* AddBookView.swift */,
+				08C1AF242CABE9EE0020BA74 /* DetailView.swift */,
+				08C1AF1A2CAB00770020BA74 /* ActualAppView.swift */,
+				08C1AF222CABE3830020BA74 /* EmojiRatingView.swift */,
+				08C1AF1C2CAB0AB60020BA74 /* Book.swift */,
+				08C1AF202CABD6F20020BA74 /* RatingView.swift */,
 				081D2CE12CAACD1300E1D4BF /* Review */,
 				081D2CD72CAAC62200E1D4BF /* Assets.xcassets */,
 				081D2CD92CAAC62200E1D4BF /* Preview Content */,
@@ -154,10 +172,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08C1AF232CABE3830020BA74 /* EmojiRatingView.swift in Sources */,
 				08C1AF172CAAE27F0020BA74 /* SwiftDataView.swift in Sources */,
 				08C1AF152CAAD64B0020BA74 /* TextEditorView.swift in Sources */,
+				08C1AF1D2CAB0AB60020BA74 /* Book.swift in Sources */,
+				08C1AF212CABD6F20020BA74 /* RatingView.swift in Sources */,
+				08C1AF252CABE9EE0020BA74 /* DetailView.swift in Sources */,
+				08C1AF1F2CAB0BBA0020BA74 /* AddBookView.swift in Sources */,
 				081D2CD62CAAC62100E1D4BF /* BindingWrapperView.swift in Sources */,
 				08C1AF192CAAE3C00020BA74 /* Student.swift in Sources */,
+				08C1AF1B2CAB00770020BA74 /* ActualAppView.swift in Sources */,
 				081D2CD42CAAC62100E1D4BF /* BookwormApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
