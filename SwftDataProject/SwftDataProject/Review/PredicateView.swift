@@ -4,10 +4,14 @@ import SwiftUI
 struct PredicateView: View {
     @Environment(\.modelContext) var modelContext
     @State private var showingUpcomingOnly = false
+    @State private var sortOrder = [
+        SortDescriptor(\User.name),
+        SortDescriptor(\User.joinDate)
+    ]
 
     var body: some View {
         NavigationStack {
-            UsersView(minimumJoinDate: showingUpcomingOnly ? .now : .distantPast)
+            UsersView(minimumJoinDate: showingUpcomingOnly ? .now : .distantPast, sortOrder: sortOrder)
                 .navigationTitle("Users")
                 .navigationDestination(for: User.self) { user in
                     EditUserView(user: user)
@@ -29,6 +33,20 @@ struct PredicateView: View {
                     Button(showingUpcomingOnly ? "Show Everyone" : "Show Upcoming") {
                         showingUpcomingOnly.toggle()
                     }
+                    Menu("Sort", systemImage: "arrow.up.arrow.down") {
+                        Picker("Sort", selection: $sortOrder) {
+                            Text("Sort by name")
+                                .tag([
+                                    SortDescriptor(\User.name),
+                                    SortDescriptor(\User.joinDate)
+                                ])
+                            Text("Sort by Join Date")
+                                .tag([
+                                    SortDescriptor(\User.joinDate),
+                                    SortDescriptor(\User.name)
+                                ])
+                        }
+                    }
                 }
         }
     }
@@ -36,6 +54,8 @@ struct PredicateView: View {
 
 #Preview {
     PredicateView()
+}
+
 //    do {
 //        let config = ModelConfiguration(isStoredInMemoryOnly: true)
 //        let container = try ModelContainer(for: User.self, configurations: config)
@@ -49,7 +69,7 @@ struct PredicateView: View {
 //    } catch {
 //        return Text("Failed to create preview!\(error.localizedDescription)")
 //    }
-}
+// }
 
 /*
  struct PredicateView: View {
