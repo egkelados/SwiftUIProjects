@@ -7,15 +7,18 @@
 
 // TODO: Crew Member Detail Sheet:  Add a .sheet that pops up when you long-press on a crew member's image in the MissionView. This sheet could show more detailed information about the astronaut, such as additional mission stats.
 
-//TODO: Mission Gallery In the MissionView, add a gallery of mission-related images at the bottom, where users can scroll through related images of the mission (even just placeholder images for now).
+// TODO: Mission Gallery In the MissionView, add a gallery of mission-related images at the bottom, where users can scroll through related images of the mission (even just placeholder images for now).
 
 import SwiftUI
 
 struct MissionView: View {
-    struct CrewMember {
+    struct CrewMember: Identifiable {
+        var id = UUID()
         let role: String
         let astronaut: Astronaut
     }
+
+    @State private var crewMemberDetails: CrewMember?
 
     let mission: Missions
     let crew: [CrewMember]
@@ -45,7 +48,7 @@ struct MissionView: View {
                         .frame(height: 3)
                         .foregroundStyle(.white.opacity(0.8))
                         .padding(.vertical)
-                    
+
                     Text("Crew")
                         .font(.title.bold())
                         .padding(.bottom, 5)
@@ -56,7 +59,7 @@ struct MissionView: View {
                     HStack {
                         ForEach(crew, id: \.role) { crewMemeber in
                             NavigationLink {
-                                AstronautView(astronaut: crewMemeber.astronaut )
+                                AstronautView(astronaut: crewMemeber.astronaut)
                             } label: {
                                 HStack {
                                     Image(crewMemeber.astronaut.id)
@@ -67,7 +70,9 @@ struct MissionView: View {
                                             Capsule()
                                                 .strokeBorder(.white, lineWidth: 1)
                                         )
-
+                                        .onLongPressGesture(minimumDuration: 0.9, maximumDistance: 50) {
+                                            crewMemberDetails = crewMemeber
+                                        }
                                     VStack(alignment: .leading) {
                                         Text(crewMemeber.astronaut.name)
                                             .foregroundStyle(.white)
@@ -78,6 +83,7 @@ struct MissionView: View {
                                     }
                                 }
                                 .padding(.horizontal)
+                                
                             }
                         }
                     }
@@ -88,6 +94,9 @@ struct MissionView: View {
         .navigationTitle(mission.displayName)
         .navigationBarTitleDisplayMode(.inline)
         .background(.darkBackground)
+        .sheet(item: $crewMemberDetails) { member in
+            AstronautView(astronaut: member.astronaut)
+        }
     }
 
     init(mission: Missions, astronauts: [String: Astronaut]) {
