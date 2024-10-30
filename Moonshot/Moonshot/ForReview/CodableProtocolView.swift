@@ -22,24 +22,67 @@ struct Address: Codable {
 }
 
 struct CodableProtocolView: View {
+    @State private var showAlert = false
+    @State private var user: User?
     var body: some View {
-        Button("DecodeJSON") {
-            let input = """
-            {
-                "name" : "Taylor Swift",
-                "address": {
-                    "street" : "555, Taylor swift UI",
-                    "city" : "Nashvilllew"
+        NavigationStack {
+            Button("DecodeJSON") {
+                let input = """
+                {
+                    "name" : "Taylor Swift"
+                    "address": {
+                        "street" : "555, Taylor swift UI",
+                        "city" : "Nashvilllew"
+                    }
+                }
+                """
+                .data(using: .utf8)!
+
+                //            let data = Data(input.utf8)
+                let decoder = JSONDecoder()
+                do {
+                    let user = try decoder.decode(User.self, from: input)
+                    print(user.address)
+                    self.user = user
+
+                } catch {
+                    self.showAlert.toggle()
                 }
             }
-            """
+            .padding(41)
 
-            let data = Data(input.utf8)
-            let decoder = JSONDecoder()
-            if let user = try? decoder.decode(User.self, from: data) {
-                print(user.address)
+            if let user = user {
+                NavigationLink(destination: UserDetailsView(user: user)) {
+                    Text("User Details")
+                }
             }
         }
+        .alert(isPresented: self.$showAlert) {
+            Alert(title: Text("No Data to display"), message: Text("Please try again later...."), dismissButton: .cancel())
+        }
+    }
+}
+
+struct UserDetailsView: View {
+    let user: User
+    var body: some View {
+        ZStack {
+            ContentView()
+            VStack {
+                Text("User name : \(self.user.name)")
+                    .textModifier()
+                Text("Address : \(self.user.address.city)")
+                    .textModifier()
+            }
+        }
+    }
+}
+
+extension View {
+    func textModifier() -> some View {
+        self
+            .font(.title.bold())
+            .padding()
     }
 }
 

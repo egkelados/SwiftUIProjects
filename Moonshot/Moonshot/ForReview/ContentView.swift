@@ -12,12 +12,20 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         Image(.mood)
+            .customModifier()
+    }
+}
+
+extension Image {
+    func customModifier() -> some View {
+        self
             .resizable()
-            .scaledToFit()
+            .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/ .fill/*@END_MENU_TOKEN@*/)
             .containerRelativeFrame(.horizontal) {
-                size, axis in // axis = _
+                size, _ in // axis = _
                 size * 0.9
             }
+            .ignoresSafeArea()
     }
 }
 

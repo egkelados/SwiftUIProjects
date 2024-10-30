@@ -10,6 +10,7 @@
 import SwiftUI
 
 // MARK: Custom text
+
 struct CustomText: View {
     let text: String
 
@@ -24,16 +25,21 @@ struct CustomText: View {
 }
 
 // MARK: Scroll view
+
 struct ScrollingDataView: View {
     var body: some View {
-        ScrollView(.horizontal) {
-            LazyHStack(spacing: 10) {
-                ForEach(0 ..< 100) {
-                    CustomText(text: "Item \($0)")
-                        .font(.title)
+        ZStack{
+            ContentView()
+                .opacity(0.5)
+            ScrollView(.horizontal) {
+                LazyHStack(spacing: 10) {
+                    ForEach(0 ..< 100) {
+                        CustomText(text: "Item \($0)")
+                            .font(.title)
+                    }
                 }
+                .frame(maxWidth: .infinity)
             }
-            .frame(maxWidth: .infinity)
         }
     }
 }
