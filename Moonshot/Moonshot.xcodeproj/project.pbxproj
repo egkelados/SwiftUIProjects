@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0853A7122CD2679200384338 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0853A7112CD2679200384338 /* GalleryView.swift */; };
 		086B5CFC2C9AED6A00ACF976 /* ActualAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086B5CFB2C9AED6A00ACF976 /* ActualAppView.swift */; };
 		086B5CFF2C9AEDAF00ACF976 /* astronauts.json in Resources */ = {isa = PBXBuildFile; fileRef = 086B5CFD2C9AEDAE00ACF976 /* astronauts.json */; };
 		086B5D002C9AEDAF00ACF976 /* missions.json in Resources */ = {isa = PBXBuildFile; fileRef = 086B5CFE2C9AEDAF00ACF976 /* missions.json */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0853A7112CD2679200384338 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
 		086B5CFB2C9AED6A00ACF976 /* ActualAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualAppView.swift; sourceTree = "<group>"; };
 		086B5CFD2C9AEDAE00ACF976 /* astronauts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = astronauts.json; sourceTree = "<group>"; };
 		086B5CFE2C9AEDAF00ACF976 /* missions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = missions.json; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				086B5CFB2C9AED6A00ACF976 /* ActualAppView.swift */,
 				086B5D0C2C9B04A000ACF976 /* MissionView.swift */,
 				086B5D0E2C9B3B5C00ACF976 /* AstronautView.swift */,
+				0853A7112CD2679200384338 /* GalleryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				08C6CBB42C9970E800DC4067 /* ScrollingDataView.swift in Sources */,
 				086B5D0D2C9B04A000ACF976 /* MissionView.swift in Sources */,
 				086B5D032C9AEE9600ACF976 /* Astronaut.swift in Sources */,
+				0853A7122CD2679200384338 /* GalleryView.swift in Sources */,
 				086B5CFC2C9AED6A00ACF976 /* ActualAppView.swift in Sources */,
 				086B5D052C9AEF2E00ACF976 /* Bundle-Decodable.swift in Sources */,
 				086B5D0F2C9B3B5C00ACF976 /* AstronautView.swift in Sources */,

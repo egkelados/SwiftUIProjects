@@ -5,7 +5,7 @@
 //  Created by Xristos Mantsos on 18/9/24.
 //
 
-// TODO: Crew Member Detail Sheet:  Add a .sheet that pops up when you long-press on a crew member's image in the MissionView. This sheet could show more detailed information about the astronaut, such as additional mission stats.
+// TODO: Crew Member Detail Sheet:  Add a .sheet that pops up when you long-press on a crew member's image in the MissionView. This sheet could show more detailed information about the astronaut, such as additional mission stats. done
 
 // TODO: Mission Gallery In the MissionView, add a gallery of mission-related images at the bottom, where users can scroll through related images of the mission (even just placeholder images for now).
 
@@ -22,6 +22,9 @@ struct MissionView: View {
 
     let mission: Missions
     let crew: [CrewMember]
+    let galleryImages = [
+        "evans", "mood", "apollo16", "apollo11", "apollo12", "apollo11"
+    ]
 
     var body: some View {
         ScrollView {
@@ -83,10 +86,22 @@ struct MissionView: View {
                                     }
                                 }
                                 .padding(.horizontal)
-                                
                             }
                         }
                     }
+                }
+                Text("Gallery of Mission")
+                    .foregroundStyle(.white)
+                    .font(.title.bold())
+                    .padding()
+
+                NavigationLink(destination: GalleryView(images: galleryImages)) {
+                    Text("View Photos")
+                        .font(.headline)
+                        .foregroundColor(.blue)
+                        .padding()
+                        .background(.lightBackground)
+                        .clipShape(.rect(cornerRadius: 15))
                 }
             }
             .padding(.bottom)
