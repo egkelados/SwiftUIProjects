@@ -72,6 +72,20 @@ struct ActualAppView: View {
                 }
                 .searchable(text: $search)
                 .padding([.horizontal, .bottom])
+                
+                Text("Gallery of Mission")
+                    .foregroundStyle(.white)
+                    .font(.title.bold())
+                    .padding()
+
+                NavigationLink(destination: GalleryView()) {
+                    Text("View Photos")
+                        .font(.headline)
+                        .foregroundColor(.blue)
+                        .padding()
+                        .background(.lightBackground)
+                        .clipShape(.rect(cornerRadius: 15))
+                }
             }
             .navigationTitle("MoonShot")
             .background(.darkBackground)

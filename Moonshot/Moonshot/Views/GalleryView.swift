@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct GalleryView: View {
-    let images: [String]
     var body: some View {
         ScrollView {
             VStack {
-                ForEach(images, id: \.self) { image in
+                ForEach(AppImages.galleryImages, id: \.self) { image in
+
                     Image(image)
                         .resizable()
                         .scaledToFit()
@@ -29,5 +29,5 @@ struct GalleryView: View {
 }
 
 #Preview {
-    GalleryView(images: [""])
+    GalleryView()
 }

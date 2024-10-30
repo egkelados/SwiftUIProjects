@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0853A7122CD2679200384338 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0853A7112CD2679200384338 /* GalleryView.swift */; };
+		0853A7142CD2711E00384338 /* AppImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0853A7132CD2711E00384338 /* AppImages.swift */; };
 		086B5CFC2C9AED6A00ACF976 /* ActualAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086B5CFB2C9AED6A00ACF976 /* ActualAppView.swift */; };
 		086B5CFF2C9AEDAF00ACF976 /* astronauts.json in Resources */ = {isa = PBXBuildFile; fileRef = 086B5CFD2C9AEDAE00ACF976 /* astronauts.json */; };
 		086B5D002C9AEDAF00ACF976 /* missions.json in Resources */ = {isa = PBXBuildFile; fileRef = 086B5CFE2C9AEDAF00ACF976 /* missions.json */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		0853A7112CD2679200384338 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
+		0853A7132CD2711E00384338 /* AppImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppImages.swift; sourceTree = "<group>"; };
 		086B5CFB2C9AED6A00ACF976 /* ActualAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualAppView.swift; sourceTree = "<group>"; };
 		086B5CFD2C9AEDAE00ACF976 /* astronauts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = astronauts.json; sourceTree = "<group>"; };
 		086B5CFE2C9AEDAF00ACF976 /* missions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = missions.json; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 			children = (
 				086B5D042C9AEF2E00ACF976 /* Bundle-Decodable.swift */,
 				086B5D0A2C9B010900ACF976 /* Color-Theme.swift */,
+				0853A7132CD2711E00384338 /* AppImages.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				086B5D0F2C9B3B5C00ACF976 /* AstronautView.swift in Sources */,
 				08C6CBB82C9978FD00DC4067 /* CodableProtocolView.swift in Sources */,
 				08C6CBBA2C997E9A00DC4067 /* ScrollingGridView.swift in Sources */,
+				0853A7142CD2711E00384338 /* AppImages.swift in Sources */,
 				08A8CFFD2C9966D70085056F /* MoonshotApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

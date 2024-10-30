@@ -22,9 +22,6 @@ struct MissionView: View {
 
     let mission: Missions
     let crew: [CrewMember]
-    let galleryImages = [
-        "evans", "mood", "apollo16", "apollo11", "apollo12", "apollo11"
-    ]
 
     var body: some View {
         ScrollView {
@@ -89,19 +86,6 @@ struct MissionView: View {
                             }
                         }
                     }
-                }
-                Text("Gallery of Mission")
-                    .foregroundStyle(.white)
-                    .font(.title.bold())
-                    .padding()
-
-                NavigationLink(destination: GalleryView(images: galleryImages)) {
-                    Text("View Photos")
-                        .font(.headline)
-                        .foregroundColor(.blue)
-                        .padding()
-                        .background(.lightBackground)
-                        .clipShape(.rect(cornerRadius: 15))
                 }
             }
             .padding(.bottom)
