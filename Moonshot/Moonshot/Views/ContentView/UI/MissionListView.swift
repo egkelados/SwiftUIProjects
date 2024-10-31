@@ -15,9 +15,7 @@ struct MissionListView: View {
         NavigationStack {
             List(missions, id: \.id) { mission in
 
-                NavigationLink {
-                    MissionView(mission: mission, astronauts: astronauts)
-                } label: {
+                NavigationLink(value: mission) {
                     HStack {
                         Image(mission.image)
                             .resizable()
@@ -43,6 +41,8 @@ struct MissionListView: View {
             .padding([.horizontal, .bottom])
             .toolbar {
                 NavToGalleryView()
+            }
+            .navigationDestination(for: Missions.self) { mission in MissionView(mission: mission, astronauts: astronauts)
             }
         }
         .navigationTitle("Missions")
