@@ -12,7 +12,7 @@ struct MissionListView: View {
     let astronauts: [String: Astronaut]
 
     var body: some View {
-        NavigationStack {
+        VStack{
             List(missions, id: \.id) { mission in
 
                 NavigationLink(value: mission) {
@@ -21,7 +21,7 @@ struct MissionListView: View {
                             .resizable()
                             .scaledToFit()
                             .frame(width: 100, height: 100)
-                            .padding()
+//                            .padding()
 
                         VStack(alignment: .leading) {
                             Text(mission.displayName)
@@ -32,13 +32,11 @@ struct MissionListView: View {
                                 .font(.caption)
                                 .foregroundStyle(.gray)
                         }
-                        .padding(.vertical)
                     }
                 }
                 .listRowBackground(Color.darkBackground)
             }
             .listStyle(.plain) // Removes default list styling
-            .padding([.horizontal, .bottom])
             .toolbar {
                 NavToGalleryView()
             }

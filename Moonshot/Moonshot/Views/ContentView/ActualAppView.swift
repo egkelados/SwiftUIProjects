@@ -46,7 +46,6 @@ struct ActualAppView: View {
                 }
             }
             .searchable(text: $search)
-            .padding([.horizontal, .bottom])
             .toolbar {
                 Button {
                     isGrid.toggle()
