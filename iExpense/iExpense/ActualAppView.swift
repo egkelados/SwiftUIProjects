@@ -44,7 +44,7 @@ struct ActualAppView: View {
     @Environment(Expenses.self) private var expenses
     @Environment(\.editMode) private var editMode
     @State private var showingAddExpense = false
-    @State private var user = UserDefaults.standard
+//    @State private var user = UserDefaults.standard
     @State private var searchText = ""
     @State private var isArchive = false
 
@@ -185,4 +185,5 @@ struct ActualAppView: View {
 
 #Preview {
     ActualAppView()
+        .environment(Expenses())
 }

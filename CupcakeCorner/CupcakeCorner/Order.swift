@@ -6,10 +6,47 @@
 //
 
 import Foundation
+import Observation
+
+struct UserInfos: Codable, Identifiable {
+    var id = UUID()
+    let name: String
+    let streetAddress: String
+    let city: String
+    let zip: String
+}
 
 @Observable
 class Order: Codable {
     static let types = ["Vanilla", "Strawberry", "Chocolate", "Rainbow"]
+
+    private let dataKey = "userData"
+
+    var users: [UserInfos] {
+        get {
+            loadUserInfos()
+        }
+        set {
+            if let users = try? JSONEncoder().encode(newValue) {
+                UserDefaults.standard.setValue(users, forKey: dataKey)
+            }
+        }
+    }
+
+    func saveUserInfos() {
+        if let encoded = try? JSONEncoder().encode(users) {
+            UserDefaults.standard.setValue(encoded, forKey: dataKey)
+        }
+    }
+
+    func loadUserInfos() -> [UserInfos] {
+        if let savedUsers = UserDefaults.standard.data(forKey: "userData") {
+            if let decodedUsers = try? JSONDecoder().decode([UserInfos].self, from: savedUsers) {
+                return decodedUsers
+            }
+        }
+        return []
+    }
 
     var type = 0
     var quantity = 3
@@ -27,13 +64,13 @@ class Order: Codable {
 
     var addSprinkles = false
 
-    var name = ""
-    var streetAddress = ""
-    var city = ""
-    var zip = ""
+    var name = "qwe"
+    var streetAddress = "qwe"
+    var city = "qwe"
+    var zip = "qwe"
 
     var isValid: Bool {
-        if name.isEmpty || streetAddress.isEmpty || city.isEmpty || zip.isEmpty {
+        if name.isEmptyOrWhitespace() || streetAddress.isEmptyOrWhitespace() || city.isEmptyOrWhitespace() || zip.isEmptyOrWhitespace() {
             return false
         }
         return true

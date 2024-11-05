@@ -10,15 +10,14 @@ import SwiftUI
 
 struct HapticEffectsView: View {
     @State private var engine: CHHapticEngine?
+    @State private var counter = 0
     
     var body: some View {
         Button("Tap count:", action: complexSuccess)
             .onAppear(perform: prepareHaptics)
         
-//        Button("Tap count:"){
-//
-//        }
-//        .sensoryFeedback(.impact(weight: .heavy, intensity: 0.5), trigger: counter)
+        Button("Tap count:") {}
+            .sensoryFeedback(.impact(weight: .heavy, intensity: 0.5), trigger: counter)
     }
     
     func prepareHaptics() {
