@@ -28,10 +28,10 @@ class Order: Codable {
 
     var addSprinkles = false
 
-    var name = ""
-    var streetAddress = ""
-    var city = ""
-    var zip = ""
+    var name = "qwe"
+    var streetAddress = "qwe"
+    var city = "qwe"
+    var zip = "qwe"
 
     var isValid: Bool {
         if name.isEmptyOrWhitespace() || streetAddress.isEmptyOrWhitespace() || city.isEmptyOrWhitespace() || zip.isEmptyOrWhitespace() {

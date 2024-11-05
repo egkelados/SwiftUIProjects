@@ -10,7 +10,9 @@ import SwiftUI
 struct CheckoutView: View {
     @State private var confirmationMessage = ""
     @State private var showingConfirmation = false
-    
+    @State private var errorSubmittingForm = false
+    @State private var errorMessage = ""
+
     var order: Order
 
     var body: some View {
@@ -48,6 +50,11 @@ struct CheckoutView: View {
         } message: {
             Text(confirmationMessage)
         }
+        .alert("Internet Error", isPresented: $errorSubmittingForm) {
+            Button("Ok") {}
+        } message: {
+            Text(errorMessage)
+        }
     }
 
     func placeOrder() async {
@@ -58,24 +65,23 @@ struct CheckoutView: View {
             print("Failed to encode order")
             return
         }
-        
+
         // create url / config request
         let url = URL(string: "https://reqres.in/api/cupcakes")!
         var request = URLRequest(url: url)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpMethod = "POST"
+//        request.httpMethod = "POST"
         // decode the data add confirmation message to the user
         do {
-            let(data, _) = try await URLSession.shared.upload(for: request, from: encoded)
+            let (data, _) = try await URLSession.shared.upload(for: request, from: encoded)
             let decodedOrder = try JSONDecoder().decode(Order.self, from: data)
             confirmationMessage = "Your order for \(decodedOrder.quantity) x \(Order.types[decodedOrder.type].lowercased()) cupcakes is on its way!"
             showingConfirmation = true
-                
-            
-        }catch {
-            fatalError(error.localizedDescription)
-        }
 
+        } catch {
+            errorSubmittingForm.toggle()
+            errorMessage = "Unable to reach the server...Try again later... :)"
+        }
     }
 }
 
