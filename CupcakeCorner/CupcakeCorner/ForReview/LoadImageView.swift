@@ -13,7 +13,7 @@ struct LoadImageView: View {
 
         /// option: 1
 //        AsyncImage(url: URL(string: "https://hws.dev/img/logo.png"), scale: 5)
-        
+
         /// option: 2 using initializer of AsyncImage object
         /*
          AsyncImage(url: URL(string: "https://hws.dev/img/logo.png")) { image in
@@ -25,9 +25,9 @@ struct LoadImageView: View {
          }
          .frame(width: 500,height: 300)
          */
-        
+
         /// option: 3  using initializer of AsyncImage object, working with the AsyncImagePhase enumeration which gives more control over the different phases of image loading: Error phase, Success phase
-        
+
         AsyncImage(url: URL(string: "https://hws.dev/img/logo.png")) { phase in
             if let image = phase.image {
                 image
@@ -39,7 +39,7 @@ struct LoadImageView: View {
                 ProgressView()
             }
         }
-        .frame(width: 200,height: 200)
+        .frame(width: 200, height: 200)
     }
 }
 

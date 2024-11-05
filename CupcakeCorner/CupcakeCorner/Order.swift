@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Observation
 
 @Observable
 class Order: Codable {
@@ -33,7 +34,7 @@ class Order: Codable {
     var zip = ""
 
     var isValid: Bool {
-        if name.isEmpty || streetAddress.isEmpty || city.isEmpty || zip.isEmpty {
+        if name.isEmptyOrWhitespace() || streetAddress.isEmptyOrWhitespace() || city.isEmptyOrWhitespace() || zip.isEmptyOrWhitespace() {
             return false
         }
         return true

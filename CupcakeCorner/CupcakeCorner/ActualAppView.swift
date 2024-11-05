@@ -19,6 +19,8 @@ struct ActualAppView: View {
                             Text(Order.types[$0])
                         }
                     }
+                    .pickerStyle(.segmented)
+                    
                     Stepper("Number of cakes: \(order.quantity)", value: $order.quantity, in: 3 ... 20)
                 }
                 Section {

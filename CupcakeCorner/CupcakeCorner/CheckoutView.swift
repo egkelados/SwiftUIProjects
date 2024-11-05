@@ -53,16 +53,18 @@ struct CheckoutView: View {
     func placeOrder() async {
         let encoder = JSONEncoder()
 
+        // encode the data / order
         guard let encoded = try? encoder.encode(order) else {
             print("Failed to encode order")
             return
         }
         
+        // create url / config request
         let url = URL(string: "https://reqres.in/api/cupcakes")!
         var request = URLRequest(url: url)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "POST"
-        
+        // decode the data add confirmation message to the user
         do {
             let(data, _) = try await URLSession.shared.upload(for: request, from: encoded)
             let decodedOrder = try JSONDecoder().decode(Order.self, from: data)
