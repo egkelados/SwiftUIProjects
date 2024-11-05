@@ -7,6 +7,17 @@
 
 import SwiftUI
 
+// MARK: - Users list
+
+struct UsersListView: View {
+    let order: Order
+    var body: some View {
+        List(order.users) { user in
+            Text("\(user.name)")
+        }
+    }
+}
+
 struct ActualAppView: View {
     @State private var order = Order()
 
@@ -20,7 +31,7 @@ struct ActualAppView: View {
                         }
                     }
                     .pickerStyle(.segmented)
-                    
+
                     Stepper("Number of cakes: \(order.quantity)", value: $order.quantity, in: 3 ... 20)
                 }
                 Section {
@@ -33,7 +44,14 @@ struct ActualAppView: View {
                 Section {
                     NavigationLink("Delivery details", destination: AdressView(order: order))
                 }
-                .navigationTitle("Cupcake Corner")
+            }
+            .navigationTitle("Cupcake Corner")
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    NavigationLink("Users") {
+                        UsersListView(order: order)
+                    }
+                }
             }
         }
     }

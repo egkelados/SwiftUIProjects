@@ -25,7 +25,7 @@ extension View {
     }
 }
 
-//MARK: - Address View
+// MARK: - Address View
 
 struct AdressView: View {
     @Bindable var order: Order
@@ -34,13 +34,12 @@ struct AdressView: View {
         Form {
             Section {
                 TextField("Name", text: $order.name)
-                    .trimmedText($order.name)
+
                 TextField("Street", text: $order.streetAddress)
-                    .trimmedText($order.streetAddress)
+
                 TextField("City", text: $order.city)
-                    .trimmedText($order.city)
+
                 TextField("Zip", text: $order.zip)
-                    .trimmedText($order.zip)
             }
 
             Section {

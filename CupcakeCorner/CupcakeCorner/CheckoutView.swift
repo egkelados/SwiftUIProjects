@@ -70,11 +70,16 @@ struct CheckoutView: View {
         let url = URL(string: "https://reqres.in/api/cupcakes")!
         var request = URLRequest(url: url)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-//        request.httpMethod = "POST"
+        request.httpMethod = "POST"
         // decode the data add confirmation message to the user
         do {
             let (data, _) = try await URLSession.shared.upload(for: request, from: encoded)
             let decodedOrder = try JSONDecoder().decode(Order.self, from: data)
+
+            // add user into the userDefaults
+            let newUser = UserInfos(name: order.name, streetAddress: order.streetAddress, city: order.city, zip: order.zip)
+            order.users.append(newUser)
+
             confirmationMessage = "Your order for \(decodedOrder.quantity) x \(Order.types[decodedOrder.type].lowercased()) cupcakes is on its way!"
             showingConfirmation = true
 
