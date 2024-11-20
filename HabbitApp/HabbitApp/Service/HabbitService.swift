@@ -10,11 +10,11 @@ import Foundation
 class HabbitService {
     func fetchHabbits() -> [Habbits] {
         return [
-            Habbits(title: "Morning Jog", category: .health),
-            Habbits(title: "Save $100", category: .finance),
-            Habbits(title: "Work on Side Project", category: .hustle),
-            Habbits(title: "Complete Team Report", category: .work),
-            Habbits(title: "Evening Workout", category: .gym),
+            Habbits(title: "Morning Jog", category: .health, description: "something here"),
+            Habbits(title: "Save $100", category: .finance, description: "something here"),
+            Habbits(title: "Work on Side Project", category: .hustle, description: "something here"),
+            Habbits(title: "Complete Team Report", category: .work, description: "something here"),
+            Habbits(title: "Evening Workout", category: .gym, description: "something here"),
         ]
     }
 }

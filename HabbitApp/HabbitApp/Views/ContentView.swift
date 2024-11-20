@@ -26,11 +26,8 @@ struct ContentView: View {
                 .onDelete(perform: vm.deleteHabbit)
             }
             .navigationTitle("My Habbits")
-            .onAppear {
-                vm.loadHabbits()
-            }
             .listStyle(.grouped)
-            .overlay{NoHabbitsView(vm: vm)}
+            .overlay { NoHabbitsView(vm: vm) }
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button("Add", systemImage: "add") {
@@ -42,7 +39,7 @@ struct ContentView: View {
                 }
             }
             .sheet(isPresented: $showAddSheet) {
-                AddFormView()
+                AddFormView(vm: vm)
             }
         }
     }
@@ -54,9 +51,9 @@ struct ContentView: View {
 }
 
 struct NoHabbitsView: View {
-    let vm : HabbitViewModel
+    let vm: HabbitViewModel
     var body: some View {
-       Group {
+        Group {
             if vm.habbits.isEmpty {
                 ContentUnavailableView(label: {
                     Label("No habits", systemImage: "list.bullet")
