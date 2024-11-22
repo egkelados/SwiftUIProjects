@@ -8,19 +8,29 @@ import SwiftUI
 
 struct ContentView: View {
     @Environment(\.editMode) private var editMode
-    @State var vm = HabbitViewModel()
+    @State var vm = HabbitListViewModel()
     @State private var showAddSheet = false
 
     var body: some View {
         NavigationStack {
             List {
-                ForEach(vm.habbits) { habbit in
+                ForEach(vm.habbits, id: \.title) { habbit in
                     VStack(alignment: .leading) {
-                        Text(habbit.title)
-                            .font(.headline)
-                        Text(habbit.category.rawValue.capitalized)
-                            .font(.subheadline)
-                            .foregroundColor(.secondary)
+                        NavigationLink(habbit.title) { DetailsView(habbit: habbit, vm: vm) }
+
+                        HStack {
+                            Text(habbit.category.capitalized)
+                                .font(.subheadline)
+                                .foregroundColor(.secondary)
+
+                            Spacer()
+
+                            Text("Count: \(habbit.count)")
+                                .font(.subheadline)
+                                .foregroundColor(.secondary)
+                                
+                            Spacer()
+                        }
                     }
                 }
                 .onDelete(perform: vm.deleteHabbit)
@@ -51,7 +61,7 @@ struct ContentView: View {
 }
 
 struct NoHabbitsView: View {
-    let vm: HabbitViewModel
+    let vm: HabbitListViewModel
     var body: some View {
         Group {
             if vm.habbits.isEmpty {

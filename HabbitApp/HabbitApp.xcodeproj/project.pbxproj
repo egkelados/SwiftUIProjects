@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0806884A2CF0A1E100A81E66 /* DividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080688492CF0A1E100A81E66 /* DividerView.swift */; };
+		082B08442CEFD07C0073EBD7 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B08432CEFD07C0073EBD7 /* DetailsView.swift */; };
 		0867FFBA2CEE73FA00D89FD4 /* AddFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0867FFB92CEE73FA00D89FD4 /* AddFormView.swift */; };
-		088D5D872CEE3A8C0034A053 /* HabbitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088D5D862CEE3A8C0034A053 /* HabbitViewModel.swift */; };
+		088D5D872CEE3A8C0034A053 /* HabbitListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088D5D862CEE3A8C0034A053 /* HabbitListViewModel.swift */; };
 		088D5D8A2CEE42FC0034A053 /* HabbitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088D5D892CEE42FC0034A053 /* HabbitService.swift */; };
 		08F98D9D2CEE35C900F85677 /* HabbitAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F98D9C2CEE35C900F85677 /* HabbitAppApp.swift */; };
 		08F98D9F2CEE35C900F85677 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F98D9E2CEE35C900F85677 /* ContentView.swift */; };
@@ -18,8 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		080688492CF0A1E100A81E66 /* DividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerView.swift; sourceTree = "<group>"; };
+		082B08432CEFD07C0073EBD7 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		0867FFB92CEE73FA00D89FD4 /* AddFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFormView.swift; sourceTree = "<group>"; };
-		088D5D862CEE3A8C0034A053 /* HabbitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabbitViewModel.swift; sourceTree = "<group>"; };
+		088D5D862CEE3A8C0034A053 /* HabbitListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabbitListViewModel.swift; sourceTree = "<group>"; };
 		088D5D892CEE42FC0034A053 /* HabbitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabbitService.swift; sourceTree = "<group>"; };
 		08F98D992CEE35C800F85677 /* HabbitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HabbitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08F98D9C2CEE35C900F85677 /* HabbitAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabbitAppApp.swift; sourceTree = "<group>"; };
@@ -44,6 +48,7 @@
 			isa = PBXGroup;
 			children = (
 				0867FFB92CEE73FA00D89FD4 /* AddFormView.swift */,
+				080688492CF0A1E100A81E66 /* DividerView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -99,6 +104,7 @@
 			children = (
 				0867FFB82CEE73EB00D89FD4 /* UI */,
 				08F98D9E2CEE35C900F85677 /* ContentView.swift */,
+				082B08432CEFD07C0073EBD7 /* DetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -114,7 +120,7 @@
 		08F98DAC2CEE383600F85677 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				088D5D862CEE3A8C0034A053 /* HabbitViewModel.swift */,
+				088D5D862CEE3A8C0034A053 /* HabbitListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -190,10 +196,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				08F98D9F2CEE35C900F85677 /* ContentView.swift in Sources */,
+				082B08442CEFD07C0073EBD7 /* DetailsView.swift in Sources */,
 				08F98D9D2CEE35C900F85677 /* HabbitAppApp.swift in Sources */,
 				0867FFBA2CEE73FA00D89FD4 /* AddFormView.swift in Sources */,
 				088D5D8A2CEE42FC0034A053 /* HabbitService.swift in Sources */,
-				088D5D872CEE3A8C0034A053 /* HabbitViewModel.swift in Sources */,
+				088D5D872CEE3A8C0034A053 /* HabbitListViewModel.swift in Sources */,
+				0806884A2CF0A1E100A81E66 /* DividerView.swift in Sources */,
 				08F98DAE2CEE388500F85677 /* Habbits.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

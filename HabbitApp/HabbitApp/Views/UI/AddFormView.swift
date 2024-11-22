@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AddFormView: View {
     @Environment(\.dismiss) private var dismiss
-    let vm: HabbitViewModel
+    let vm: HabbitListViewModel
     @State private var title = ""
     @State private var category: Categories = .gym
     @State private var description = ""
@@ -33,7 +33,7 @@ struct AddFormView: View {
                 .frame(height: 450)
                 Spacer()
                 Button("Save") {
-                    let habbit = Habbits(title: title, category: category, description: description)
+                    let habbit = HabbitViewModel(habbit: Habbits(title: title, category: category, description: description))
                     vm.save(habbit: habbit)
                     dismiss()
                 }
@@ -58,6 +58,6 @@ struct AddFormView: View {
 }
 
 #Preview {
-    AddFormView(vm: HabbitViewModel())
+    AddFormView(vm: HabbitListViewModel())
         .preferredColorScheme(.dark)
 }
