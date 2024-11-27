@@ -29,8 +29,11 @@ struct ActualAppView: View {
                             EmojiRatingView(rating: book.rating)
                                 .font(.largeTitle)
                             VStack(alignment: .leading) {
-                                Text("The title is: \(book.title)")
+                                Text("The title is: ") +
+                                    Text(book.title)
                                     .font(.headline)
+                                    .foregroundStyle(book.rating == 1 ? .red : .black)
+
                                 Text("From the author: \(book.author)")
                                     .foregroundStyle(.secondary)
                             }

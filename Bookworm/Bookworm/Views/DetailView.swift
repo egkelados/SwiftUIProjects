@@ -40,6 +40,13 @@ struct DetailView: View {
 
                 RatingView(rating: .constant(book.rating))
                     .font(.largeTitle)
+
+                HStack {
+                    Spacer()
+                    Text("\(book.date.formatted(date: .numeric, time: .shortened))")
+                        .font(.caption)
+                }
+                .padding()
             }
         }
         .navigationTitle(book.title)
