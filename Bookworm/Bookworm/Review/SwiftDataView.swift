@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SwiftDataView: View {
     @Environment(\.modelContext) var modelContext
-    @Query var students: [Student]
+    @Query(sort: \Student.name) var students: [Student]
     
     
     var body: some View {
@@ -38,4 +38,5 @@ struct SwiftDataView: View {
 
 #Preview {
     SwiftDataView()
+        .modelContainer(for: Student.self)
 }

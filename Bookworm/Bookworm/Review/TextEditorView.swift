@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct TextEditorView: View {
-    @AppStorage("notesE") private var notesEditor = ""
-    @AppStorage("notesT") private var notesTextField = ""
+    @AppStorage("notesET") private var notesEditor = ""
+    @AppStorage("notesE") private var notesTextField = ""
     var body: some View {
         NavigationStack {
             TextField("Enter your text",text: $notesTextField, axis: .vertical)
@@ -22,10 +22,13 @@ struct TextEditorView: View {
                 .textFieldStyle(.roundedBorder)
                 .navigationTitle("Notes")
                 .padding()
+                .background(.gray)
+            
         }
     }
 }
 
 #Preview {
     TextEditorView()
+        .preferredColorScheme(.dark)
 }

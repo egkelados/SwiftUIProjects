@@ -27,7 +27,7 @@ struct DetailView: View {
                     .foregroundStyle(.white)
                     .background(.black.opacity(0.75))
                     .clipShape(.capsule)
-                    .offset(x: -5, y: -10)
+                    .offset(x: -7, y: -10)
             }
 
             VStack {
@@ -47,7 +47,6 @@ struct DetailView: View {
         .scrollBounceBehavior(.basedOnSize)
         .alert("Delete book", isPresented: $showingDeleteAlert) {
             Button("Delete", role: .destructive, action: deleteBook)
-            Button("Cancel", role: .cancel) {}
         } message: {
             Text("Are you sure?")
         }

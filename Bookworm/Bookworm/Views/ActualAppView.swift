@@ -70,6 +70,7 @@ struct ActualAppView: View {
     }
 
     func deleteBooks(at offsets: IndexSet) {
+//        offsets.map { books[$0] }.forEach { modelContext.delete($0) }
         for offset in offsets {
             let book = books[offset]
             modelContext.delete(book)
@@ -79,4 +80,5 @@ struct ActualAppView: View {
 
 #Preview {
     ActualAppView()
+        .modelContainer(for: Book.self)
 }
