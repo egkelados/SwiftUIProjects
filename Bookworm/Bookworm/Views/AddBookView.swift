@@ -17,6 +17,11 @@ struct AddBookView: View {
     @State private var rating = 3
     @State private var genre = "Fantasy"
     @State private var review = ""
+    @State private var isReview = false
+    
+    private var isValid: Bool {
+        return !title.isEmpty && !author.isEmpty
+    }
     
     let genres = ["Fantasy", "Horror", "Kids", "Mystery", "Poetry", "Romance", "Thriller"]
     var body: some View {
@@ -34,6 +39,7 @@ struct AddBookView: View {
                 }
                 Section("Write a Review") {
                     TextEditor(text: $review)
+                    
                     RatingView(rating: $rating)
                     
 //                    Picker("Rating", selection: $rating) {
@@ -45,17 +51,41 @@ struct AddBookView: View {
                 Section {
                     Button("Save") {
                         let newBook = Book(title: title, author: author, genre: genre, review: review, rating: rating)
-                        modelContext.insert(newBook)
-                        dismiss()
+                        if !review.isEmpty {
+                            modelContext.insert(newBook)
+                            dismiss()
+                        } else {
+                            isReview.toggle()
+                        }
                     }
+                    .disabled(!isValid)
                 }
             }
+            
             .navigationTitle("Add Book")
             .navigationBarTitleDisplayMode(.inline)
+        }
+        .alert("You forgot to review the book", isPresented: $isReview) {
+            Button("OK", role: .cancel) {}
+            Button("Cancel", role: .destructive) {
+                let newBook = Book(title: title, author: author, genre: genre, review: review, rating: rating)
+                modelContext.insert(newBook)
+                dismiss()
+            }
+        } message: {
+            Text("Tap cancel to add a review!")
         }
     }
 }
 
 #Preview {
-    AddBookView()
+    do {
+        let config = ModelConfiguration(isStoredInMemoryOnly: true)
+        let container = try ModelContainer(for: Book.self, configurations: config)
+        
+        return AddBookView()
+            .modelContainer(container)
+    } catch {
+        return Text("Error displaying the preview!")
+    }
 }
