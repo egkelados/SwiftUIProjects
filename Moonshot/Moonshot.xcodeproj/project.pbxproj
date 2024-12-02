@@ -28,6 +28,7 @@
 		08A8D0012C9966D80085056F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08A8D0002C9966D80085056F /* Assets.xcassets */; };
 		08A8D0042C9966D80085056F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08A8D0032C9966D80085056F /* Preview Assets.xcassets */; };
 		08A8D00B2C996F2B0085056F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A8CFFE2C9966D70085056F /* ContentView.swift */; };
+		08BD0C9A2CFDB95600B97D2E /* Extension+FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BD0C992CFDB95600B97D2E /* Extension+FileManager.swift */; };
 		08C6CBB42C9970E800DC4067 /* ScrollingDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C6CBB32C9970E800DC4067 /* ScrollingDataView.swift */; };
 		08C6CBB62C9975F400DC4067 /* NavigLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C6CBB52C9975F400DC4067 /* NavigLinkView.swift */; };
 		08C6CBB82C9978FD00DC4067 /* CodableProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C6CBB72C9978FD00DC4067 /* CodableProtocolView.swift */; };
@@ -57,6 +58,7 @@
 		08A8CFFE2C9966D70085056F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		08A8D0002C9966D80085056F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08A8D0032C9966D80085056F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		08BD0C992CFDB95600B97D2E /* Extension+FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+FileManager.swift"; sourceTree = "<group>"; };
 		08C6CBB32C9970E800DC4067 /* ScrollingDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingDataView.swift; sourceTree = "<group>"; };
 		08C6CBB52C9975F400DC4067 /* NavigLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigLinkView.swift; sourceTree = "<group>"; };
 		08C6CBB72C9978FD00DC4067 /* CodableProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableProtocolView.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				086B5D042C9AEF2E00ACF976 /* Bundle-Decodable.swift */,
 				086B5D0A2C9B010900ACF976 /* Color-Theme.swift */,
 				0853A7132CD2711E00384338 /* AppImages.swift */,
+				08BD0C992CFDB95600B97D2E /* Extension+FileManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				08C6CBB62C9975F400DC4067 /* NavigLinkView.swift in Sources */,
 				08A8D00B2C996F2B0085056F /* ContentView.swift in Sources */,
 				086B5D0B2C9B010900ACF976 /* Color-Theme.swift in Sources */,
+				08BD0C9A2CFDB95600B97D2E /* Extension+FileManager.swift in Sources */,
 				086B5D082C9AF6FB00ACF976 /* Missions.swift in Sources */,
 				0853A71B2CD280BF00384338 /* CrewMember.swift in Sources */,
 				08C6CBB42C9970E800DC4067 /* ScrollingDataView.swift in Sources */,
