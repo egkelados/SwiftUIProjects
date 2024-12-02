@@ -14,12 +14,14 @@ import SwiftUI
 struct ActualAppView: View {
     @State private var proccessedImage: Image?
     @State private var filterIntensity = 0.5
+    @State private var filterRadius = 0.5
     @AppStorage("filterCount") var filterCount = 0
     @Environment(\.requestReview) var requestReview
     
     @State private var selectedItem: PhotosPickerItem?
     @State private var currentFilter: CIFilter = .sepiaTone()
     @State private var showingFilters = false
+    @State private var showButtons = true
     
     let context = CIContext()
     
@@ -33,6 +35,7 @@ struct ActualAppView: View {
                         proccessedImage
                             .resizable()
                             .scaledToFit()
+                        
                     } else {
                         ContentUnavailableView("No picture", systemImage: "photo.badge.plus", description: Text("Tap to import a photo"))
                     }
@@ -43,16 +46,32 @@ struct ActualAppView: View {
                 }
                 
                 Spacer()
-                
-                HStack {
-                    Text("Intensity")
-                    Slider(value: $filterIntensity)
-                        .onChange(of: filterIntensity, applyProccessing)
+                VStack {
+                    HStack {
+                        Text("Intensity")
+                        Slider(value: $filterIntensity)
+                            .onChange(of: filterIntensity, applyProccessing)
+                            .disabled(showButtons)
+                    }
+                    HStack {
+                        Text("Radius")
+                        Slider(value: $filterRadius)
+                            .onChange(of: filterRadius, applyProccessing)
+                            .disabled(showButtons)
+                    }
                 }
                 HStack {
                     Button("Change Filter") {
+                        let filterNames = CIFilter.filterNames(inCategory: nil)
+                        filterNames.forEach { print($0) }
+                        if let filter = CIFilter(name: "CIScreenBlendMode") {
+                            print("Filter Name: \(filter.name)")
+                            print("Attributes: \(filter.attributes)")
+                        }
+
                         changeFilter()
                     }
+//                    .disabled(showButtons)
                     
                     Spacer()
                     
@@ -71,6 +90,9 @@ struct ActualAppView: View {
                 Button("Sepia Tone") { setFilter(CIFilter.sepiaTone()) }
                 Button("Unsharp Mask") { setFilter(CIFilter.unsharpMask()) }
                 Button("Vignette") { setFilter(CIFilter.vignette()) }
+                Button("Commic Effect") { setFilter(CIFilter.comicEffect()) }
+                Button("Zoom Blur") { setFilter(CIFilter.zoomBlur()) }
+                Button("Bump Distortion") { setFilter(CIFilter.bumpDistortion()) }
                 Button("Cancel", role: .cancel) {}
             }
         }
@@ -88,6 +110,7 @@ struct ActualAppView: View {
             
             let beginImage = CIImage(image: inputImage)
             currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
+            showButtons = false
             applyProccessing()
         }
     }
@@ -97,10 +120,15 @@ struct ActualAppView: View {
         
         if inputKeys.contains(kCIInputIntensityKey) { currentFilter.setValue(filterIntensity, forKey: kCIInputIntensityKey) }
 
-        if inputKeys.contains(kCIInputRadiusKey) { currentFilter.setValue(filterIntensity * 200, forKey: kCIInputRadiusKey) }
+        if inputKeys.contains(kCIInputRadiusKey) { currentFilter.setValue(filterRadius * 200, forKey: kCIInputRadiusKey) }
 
         if inputKeys.contains(kCIInputScaleKey) { currentFilter.setValue(filterIntensity * 10, forKey: kCIInputScaleKey) }
+        if inputKeys.contains(kCIInputRadiusKey) { currentFilter.setValue(filterRadius * 300, forKey: kCIInputRadiusKey) }
+        if inputKeys.contains(kCIInputScaleKey) { currentFilter.setValue(filterIntensity * 2, forKey: kCIInputScaleKey) }
+        if inputKeys.contains(kCIInputCenterKey) { currentFilter.setValue(CIVector(x: 350, y: 250), forKey: kCIInputCenterKey) }
         
+        if inputKeys.contains(kCIInputAmountKey) { currentFilter.setValue(filterIntensity * 40, forKey: kCIInputAmountKey) }
+
         guard let outputImage = currentFilter.outputImage else { return }
         
         guard let cgImage = context.createCGImage(outputImage, from: outputImage.extent) else { return }
