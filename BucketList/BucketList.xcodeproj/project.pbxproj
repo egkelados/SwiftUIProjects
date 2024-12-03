@@ -21,6 +21,7 @@
 		08BD0CA82CFDEDA800B97D2E /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BD0CA72CFDEDA800B97D2E /* Result.swift */; };
 		08BD0CAA2CFDFC8300B97D2E /* ActualAppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BD0CA92CFDFC8300B97D2E /* ActualAppViewModel.swift */; };
 		08BD0CAE2CFE070900B97D2E /* Extension+CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BD0CAD2CFE070900B97D2E /* Extension+CLLocationCoordinate2D.swift */; };
+		08BD0CB02CFF18BC00B97D2E /* EditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BD0CAF2CFF18BC00B97D2E /* EditViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		08BD0CA72CFDEDA800B97D2E /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		08BD0CA92CFDFC8300B97D2E /* ActualAppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualAppViewModel.swift; sourceTree = "<group>"; };
 		08BD0CAD2CFE070900B97D2E /* Extension+CLLocationCoordinate2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+CLLocationCoordinate2D.swift"; sourceTree = "<group>"; };
+		08BD0CAF2CFF18BC00B97D2E /* EditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				08BD0C882CFDB1C400B97D2E /* BucketListApp.swift */,
 				08BD0CA12CFDD01500B97D2E /* ActualAppView.swift */,
 				08BD0CA52CFDE6BD00B97D2E /* EditView.swift */,
+				08BD0CAF2CFF18BC00B97D2E /* EditViewModel.swift */,
 				08BD0CA92CFDFC8300B97D2E /* ActualAppViewModel.swift */,
 				08BD0CAD2CFE070900B97D2E /* Extension+CLLocationCoordinate2D.swift */,
 				08BD0CA72CFDEDA800B97D2E /* Result.swift */,
@@ -186,6 +189,7 @@
 				08BD0C9E2CFDBEDB00B97D2E /* MapKitIntergration.swift in Sources */,
 				08BD0C982CFDB59600B97D2E /* DocumentDirectoryView.swift in Sources */,
 				08BD0CAA2CFDFC8300B97D2E /* ActualAppViewModel.swift in Sources */,
+				08BD0CB02CFF18BC00B97D2E /* EditViewModel.swift in Sources */,
 				08BD0CA02CFDC5F200B97D2E /* TouchingFaceIdView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

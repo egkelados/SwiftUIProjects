@@ -17,6 +17,8 @@ extension ActualAppView {
         private(set) var locations: [Location]
         var updateTrigger = false
         var isUnlocked = false
+        var errorMessage = ""
+        var failed = false
 
         let savePath = URL.documentsDirectory.appending(path: "SavedPlaces")
 
@@ -26,6 +28,8 @@ extension ActualAppView {
                 locations = try JSONDecoder().decode([Location].self, from: data)
             } catch {
                 locations = []
+                errorMessage = "Failed to load saved locations.."
+                failed = true
             }
         }
 
@@ -35,6 +39,8 @@ extension ActualAppView {
                 try data.write(to: savePath, options: [.atomic, .completeFileProtection])
             } catch {
                 print("Undable to save data...")
+                errorMessage = "Undable to save data..."
+                failed = true
             }
         }
 
@@ -76,11 +82,13 @@ extension ActualAppView {
                     if success {
                         self.isUnlocked = true
                     } else {
-                        // error
+                        self.errorMessage = "Unathenticated user..."
+                        self.failed = true
                     }
                 }
             } else {
-                // no biometricks
+                errorMessage = "Unathenticated user..."
+                failed = true
             }
         }
     }
