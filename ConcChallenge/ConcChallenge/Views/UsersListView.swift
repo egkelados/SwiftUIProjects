@@ -5,14 +5,17 @@
 //  Created by Xristos Mantsos on 9/12/24.
 //
 
+import SwiftData
 import SwiftUI
 
 struct UsersListView: View {
+    @Environment(\.modelContext) private var context
     private var vm = ViewModel()
+    @Query(sort: \User.name, order: .forward) var users: [User]
 
     var body: some View {
         NavigationStack {
-            List(vm.users, id: \.id) { user in
+            List(users, id: \.id) { user in
                 NavigationLink(value: user) {
                     HStack {
                         Text(user.name)
@@ -29,14 +32,15 @@ struct UsersListView: View {
             }
         }
         .task {
-            if vm.users.isEmpty {
-                await vm.populateUsers()
+            if users.isEmpty {
+                await vm.populateUsers(context: context)
             }
         }
     }
 }
 
 #Preview {
-    UsersListView()
+    return UsersListView()
+        .modelContainer(for: [User.self])
         .preferredColorScheme(.dark)
 }

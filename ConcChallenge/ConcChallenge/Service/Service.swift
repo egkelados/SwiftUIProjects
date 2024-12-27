@@ -14,14 +14,13 @@ enum NetworkError: Error {
 }
 
 class Service {
-    func fetchData() async throws -> [User] {
+    func fetchData() async throws -> [APIUser] {
         guard let url = URL(string: "https://www.hackingwithswift.com/samples/friendface.json") else { throw NetworkError.badURL }
 
         let (data, _) = try await URLSession.shared.data(from: url)
-        print(String(data: data, encoding: .utf8))
 
         do {
-            let users = try JSONDecoder().decode([User].self, from: data)
+            let users = try JSONDecoder().decode([APIUser].self, from: data)
             return users
         } catch {
             print("Failed to decede the data...")
