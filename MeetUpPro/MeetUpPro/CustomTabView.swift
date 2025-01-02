@@ -11,17 +11,17 @@ import SwiftUI
 struct CustomTabView: View {
     var body: some View {
         TabView {
-            PhotoListView() // Your main photo list view
+            PhotoListView()
                 .tabItem {
                     Label("Photos", systemImage: "photo")
                 }
 
-            SettingsView() // A placeholder for another tab, e.g., settings
+            SettingsView()
                 .tabItem {
                     Label("Settings", systemImage: "gearshape")
                 }
-            
-            MapPplView() // A placeholder for another tab, e.g., settings
+
+            MapPplView()
                 .tabItem {
                     Label("Map", systemImage: "map")
                 }
@@ -33,6 +33,7 @@ struct CustomTabView: View {
     CustomTabView()
         .modelContainer(for: [DataMeet.self])
 }
+
 struct SettingsView: View {
     var body: some View {
         NavigationStack {
