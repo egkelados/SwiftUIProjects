@@ -5,23 +5,22 @@
 //  Created by Xristos Mantsos on 27/12/24.
 //
 
-import SwiftData
 import SwiftUI
 
 struct CustomTabView: View {
     var body: some View {
         TabView {
-            PhotoListView() // Your main photo list view
+            PhotoListView()
                 .tabItem {
                     Label("Photos", systemImage: "photo")
                 }
 
-            SettingsView() // A placeholder for another tab, e.g., settings
+            SettingsView()
                 .tabItem {
                     Label("Settings", systemImage: "gearshape")
                 }
-            
-            MapPplView() // A placeholder for another tab, e.g., settings
+
+            MapPplView()
                 .tabItem {
                     Label("Map", systemImage: "map")
                 }
@@ -31,8 +30,8 @@ struct CustomTabView: View {
 
 #Preview {
     CustomTabView()
-        .modelContainer(for: [DataMeet.self])
 }
+
 struct SettingsView: View {
     var body: some View {
         NavigationStack {

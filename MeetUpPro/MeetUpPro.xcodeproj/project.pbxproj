@@ -13,6 +13,7 @@
 		08358E102D1EC80D001A14E6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08358E0F2D1EC80D001A14E6 /* Preview Assets.xcassets */; };
 		08358E182D1ECC7A001A14E6 /* DataMeet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08358E172D1ECC7A001A14E6 /* DataMeet.swift */; };
 		08358E1B2D1ED501001A14E6 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08358E1A2D1ED501001A14E6 /* MainViewModel.swift */; };
+		0842C1C62D26B3330072FE1B /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0842C1C52D26B3330072FE1B /* CustomAlertView.swift */; };
 		08C26BDA2D1EF2D000296EFE /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C26BD92D1EF2D000296EFE /* CustomTabView.swift */; };
 		08C26BDC2D21FA6900296EFE /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C26BDB2D21FA6900296EFE /* DetailView.swift */; };
 /* End PBXBuildFile section */
@@ -25,6 +26,7 @@
 		08358E0F2D1EC80D001A14E6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		08358E172D1ECC7A001A14E6 /* DataMeet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMeet.swift; sourceTree = "<group>"; };
 		08358E1A2D1ED501001A14E6 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		0842C1C52D26B3330072FE1B /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
 		08C26BD92D1EF2D000296EFE /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 		08C26BDB2D21FA6900296EFE /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,6 +63,7 @@
 			children = (
 				08358E082D1EC80B001A14E6 /* MeetUpProApp.swift */,
 				08358E0A2D1EC80B001A14E6 /* PhotoListView.swift */,
+				0842C1C52D26B3330072FE1B /* CustomAlertView.swift */,
 				08C26BDB2D21FA6900296EFE /* DetailView.swift */,
 				08358E192D1ED4EF001A14E6 /* ViewModel */,
 				08358E162D1ECC6C001A14E6 /* Model */,
@@ -166,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08C26BDA2D1EF2D000296EFE /* CustomTabView.swift in Sources */,
+				0842C1C62D26B3330072FE1B /* CustomAlertView.swift in Sources */,
 				08C26BDC2D21FA6900296EFE /* DetailView.swift in Sources */,
 				08358E0B2D1EC80B001A14E6 /* PhotoListView.swift in Sources */,
 				08358E182D1ECC7A001A14E6 /* DataMeet.swift in Sources */,

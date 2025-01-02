@@ -7,15 +7,9 @@
 
 import Foundation
 import SwiftUI
-import SwiftData
 
-@Model
-class DataMeet {
-    @Attribute(.externalStorage) var image: Data
+struct DataMeet: Codable, Hashable, Identifiable {
+    var id: UUID = UUID() 
+    var image: Data
     var name: String
-    
-    init(image: Data, name: String) {
-        self.image = image
-        self.name = name
-    }
 }

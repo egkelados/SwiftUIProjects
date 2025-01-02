@@ -8,27 +8,50 @@
 import Foundation
 import Observation
 import PhotosUI
-import SwiftData
 import SwiftUI
 
 @Observable
 class MainViewModel {
-    var currPhoto: Data?
-    var inputName = ""
-    var showInputName = false
+    private let fileName = "dataMeet.json"
+    var dataMeets: [DataMeet] = []
 
-    @MainActor
-    func addPhoto(from pickerItems: [PhotosPickerItem], to context: ModelContext) async {
+    func getFileUrl() -> URL? {
+        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return path.first?.appendingPathComponent(fileName)
+    }
+
+    func saveData() {
+        guard let fileURL = getFileUrl() else { return }
         do {
-            for item in pickerItems {
-                if let loadedImage = try await item.loadTransferable(type: Data.self) {
-                    currPhoto = loadedImage
-                    showInputName.toggle()
-                }
-            }
-            try context.save()
+            let data = try JSONEncoder().encode(dataMeets)
+            try data.write(to: fileURL)
         } catch {
-            print("Failed to save photos !")
+            print("Failed Saving Data \(error.localizedDescription)")
         }
+    }
+
+    func loadDataFromJson() {
+        guard let fileURL = getFileUrl(), FileManager.default.fileExists(atPath: fileURL.path(percentEncoded: true)) else {
+            print("JSON file does not exist.")
+            return
+        }
+        do {
+            let data = try Data(contentsOf: fileURL)
+            dataMeets = try JSONDecoder().decode([DataMeet].self, from: data)
+            print("Data loaded successfully: \(dataMeets)")
+        } catch {
+            print("Failed to load Data \(error.localizedDescription)")
+        }
+    }
+
+    func addPhoto(image: Data, name: String) {
+        let newPhoto = DataMeet(image: image, name: name)
+        dataMeets.append(newPhoto)
+        saveData()
+    }
+
+    func deletePhoto(at offSets: IndexSet) {
+        dataMeets.remove(atOffsets: offSets)
+        saveData()
     }
 }

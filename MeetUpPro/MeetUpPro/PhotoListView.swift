@@ -6,21 +6,21 @@
 //
 
 import PhotosUI
-import SwiftData
 import SwiftUI
 
 struct PhotoListView: View {
-    @Environment(\.modelContext) private var context
     @Environment(\.colorScheme) var colorScheme: ColorScheme
-    @Query(sort: \DataMeet.name) private var images: [DataMeet]
     @State private var pickerItems = [PhotosPickerItem]()
+    @State private var currPhoto: Data?
+    @State private var inputName = ""
+    @State private var showInputName = false
 
     @State private var vm = MainViewModel()
 
     var body: some View {
         NavigationStack {
             VStack {
-                if images.isEmpty {
+                if vm.dataMeets.isEmpty {
                     ContentUnavailableView {
                         Label("Add new Photos", systemImage: "photo.artframe")
                     } description: {
@@ -34,7 +34,7 @@ struct PhotoListView: View {
                 }
                 else {
                     List {
-                        ForEach(images, id: \.self) { img in
+                        ForEach(vm.dataMeets, id: \.self) { img in
                             NavigationLink(value: img) {
                                 HStack(spacing: 15) {
                                     if let uiImage = UIImage(data: img.image) {
@@ -49,26 +49,32 @@ struct PhotoListView: View {
                                 }
                             }
                         }
-                        .onDelete(perform: { indexSet in
-                            for index in indexSet {
-                                let delImage = images[index]
-                                context.delete(delImage)
-                            }
-                        })
+                        .onDelete(perform: vm.deletePhoto)
                     }
                 }
             }
             .navigationDestination(for: DataMeet.self) { img in
                 DetailView(img: img)
             }
+            .onAppear {
+                print("PhotoListView appeared, loading data...")
+                vm.loadDataFromJson()
+                print("Loaded data: \(vm.dataMeets)")
+            }
             .onChange(of: pickerItems) {
                 Task {
-                    await vm.addPhoto(from: pickerItems, to: context)
+                    for item in pickerItems {
+                        if let photoData = try? await item.loadTransferable(type: Data.self) {
+                            currPhoto = photoData
+                            print("currPhoto set: \(currPhoto != nil)")
+                            showInputName = true
+                        }
+                    }
                 }
             }
             .navigationTitle("Meeting App")
             .toolbar {
-                if !images.isEmpty {
+                if !vm.dataMeets.isEmpty {
                     ToolbarItem(placement: .automatic) {
                         PhotosPicker(selection: $pickerItems, maxSelectionCount: 1, matching: .images) {
                             Label("Select a picture", systemImage: "plus")
@@ -76,26 +82,33 @@ struct PhotoListView: View {
                     }
                 }
             }
-            .alert("Photo Title", isPresented: $vm.showInputName, actions: {
-                TextField("Name the photo", text: $vm.inputName)
-                    .foregroundColor(colorScheme == .dark ? .white : .black)
-
-                Button("Save") {
-                    if let photo = vm.currPhoto {
-                        let newImage = DataMeet(image: photo, name: vm.inputName)
-                        context.insert(newImage)
-                        vm.currPhoto = nil
-                        vm.inputName = ""
-                    }
+            .overlay(
+                CustomAlertView(
+                    isPresented: $showInputName, inputName: $inputName,
+                    title: "Photo Title",
+                    message: "Enter a name for the photo.",
+                    actionTitle: "Save",
+                    cancelTitle: "Cancel"
+                ) {
+                    guard let photo = currPhoto else { return }
+                    print("Save button pressed with name: \(inputName)")
+                    vm.addPhoto(image: photo, name: inputName)
+                    resetStates()
+                } cancelAction: {
+                    resetStates()
                 }
-                .disabled(vm.inputName.isEmpty)
-            })
+            )
         }
+    }
+
+    private func resetStates() {
+        inputName = ""
+        currPhoto = nil
+        pickerItems.removeAll()
+        showInputName = false
     }
 }
 
 #Preview {
     PhotoListView()
-        .modelContainer(for: [DataMeet.self])
-//        .preferredColorScheme(.dark)
 }

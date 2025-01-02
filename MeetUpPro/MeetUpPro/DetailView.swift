@@ -5,12 +5,9 @@
 //  Created by Xristos Mantsos on 29/12/24.
 //
 
-import SwiftData
 import SwiftUI
 
 struct DetailView: View {
-    @Environment(\.modelContext) private var context
-    @Query(sort: \DataMeet.name) private var images: [DataMeet]
     let img: DataMeet
 
     var body: some View {
