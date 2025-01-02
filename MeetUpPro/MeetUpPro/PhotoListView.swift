@@ -11,9 +11,11 @@ import SwiftUI
 
 struct PhotoListView: View {
     @Environment(\.modelContext) private var context
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
     @Query(sort: \DataMeet.name) private var images: [DataMeet]
     @State private var pickerItems = [PhotosPickerItem]()
-    let vm = MainViewModel()
+
+    @State private var vm = MainViewModel()
 
     var body: some View {
         NavigationStack {
@@ -24,7 +26,7 @@ struct PhotoListView: View {
                     } description: {
                         Text("You do not have any photos yet")
                     } actions: {
-                        PhotosPicker(selection: $pickerItems, maxSelectionCount: 2, matching: .images) {
+                        PhotosPicker(selection: $pickerItems, maxSelectionCount: 1, matching: .images) {
                             Label("Select a picture", systemImage: "photo")
                         }
                         .buttonStyle(.borderedProminent)
@@ -34,7 +36,7 @@ struct PhotoListView: View {
                     List {
                         ForEach(images, id: \.self) { img in
                             NavigationLink(value: img) {
-                                HStack {
+                                HStack(spacing: 15) {
                                     if let uiImage = UIImage(data: img.image) {
                                         Image(uiImage: uiImage)
                                             .resizable()
@@ -42,11 +44,9 @@ struct PhotoListView: View {
                                             .frame(width: 50, height: 50)
                                             .clipShape(Circle())
                                     }
+
                                     Text(img.name)
                                 }
-                            }
-                            .navigationDestination(for: DataMeet.self) { data in
-                                EmptyView()
                             }
                         }
                         .onDelete(perform: { indexSet in
@@ -56,15 +56,40 @@ struct PhotoListView: View {
                             }
                         })
                     }
-                    
                 }
+            }
+            .navigationDestination(for: DataMeet.self) { img in
+                DetailView(img: img)
             }
             .onChange(of: pickerItems) {
                 Task {
-                    await vm.addPhoto(from: pickerItems, photoName: "as", to: context)
+                    await vm.addPhoto(from: pickerItems, to: context)
                 }
             }
             .navigationTitle("Meeting App")
+            .toolbar {
+                if !images.isEmpty {
+                    ToolbarItem(placement: .automatic) {
+                        PhotosPicker(selection: $pickerItems, maxSelectionCount: 1, matching: .images) {
+                            Label("Select a picture", systemImage: "plus")
+                        }
+                    }
+                }
+            }
+            .alert("Photo Title", isPresented: $vm.showInputName, actions: {
+                TextField("Name the photo", text: $vm.inputName)
+                    .foregroundColor(colorScheme == .dark ? .white : .black)
+
+                Button("Save") {
+                    if let photo = vm.currPhoto {
+                        let newImage = DataMeet(image: photo, name: vm.inputName)
+                        context.insert(newImage)
+                        vm.currPhoto = nil
+                        vm.inputName = ""
+                    }
+                }
+                .disabled(vm.inputName.isEmpty)
+            })
         }
     }
 }
@@ -72,5 +97,5 @@ struct PhotoListView: View {
 #Preview {
     PhotoListView()
         .modelContainer(for: [DataMeet.self])
-        .preferredColorScheme(.dark)
+//        .preferredColorScheme(.dark)
 }
