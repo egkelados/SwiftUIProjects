@@ -11,6 +11,11 @@
 		0842C1DD2D26D3620072FE1B /* MultipleSelectionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0842C1DC2D26D3620072FE1B /* MultipleSelectionList.swift */; };
 		0842C1DF2D26D3640072FE1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0842C1DE2D26D3640072FE1B /* Assets.xcassets */; };
 		0842C1E22D26D3640072FE1B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0842C1E12D26D3640072FE1B /* Preview Assets.xcassets */; };
+		0842C1EA2D26D9300072FE1B /* TabViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0842C1E92D26D9300072FE1B /* TabViewDemo.swift */; };
+		0842C1EC2D26DCD20072FE1B /* ResultTypeDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0842C1EB2D26DCD20072FE1B /* ResultTypeDemo.swift */; };
+		0842C1EE2D26E1780072FE1B /* ImageInterpolationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0842C1ED2D26E1780072FE1B /* ImageInterpolationView.swift */; };
+		0842C1F02D26E7640072FE1B /* ContextMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0842C1EF2D26E7640072FE1B /* ContextMenuView.swift */; };
+		0842C1F22D26EEA90072FE1B /* CustomRowSwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0842C1F12D26EEA90072FE1B /* CustomRowSwipeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		0842C1DC2D26D3620072FE1B /* MultipleSelectionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleSelectionList.swift; sourceTree = "<group>"; };
 		0842C1DE2D26D3640072FE1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0842C1E12D26D3640072FE1B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0842C1E92D26D9300072FE1B /* TabViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewDemo.swift; sourceTree = "<group>"; };
+		0842C1EB2D26DCD20072FE1B /* ResultTypeDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTypeDemo.swift; sourceTree = "<group>"; };
+		0842C1ED2D26E1780072FE1B /* ImageInterpolationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInterpolationView.swift; sourceTree = "<group>"; };
+		0842C1EF2D26E7640072FE1B /* ContextMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextMenuView.swift; sourceTree = "<group>"; };
+		0842C1F12D26EEA90072FE1B /* CustomRowSwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRowSwipeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +81,11 @@
 			isa = PBXGroup;
 			children = (
 				0842C1DC2D26D3620072FE1B /* MultipleSelectionList.swift */,
+				0842C1E92D26D9300072FE1B /* TabViewDemo.swift */,
+				0842C1EB2D26DCD20072FE1B /* ResultTypeDemo.swift */,
+				0842C1ED2D26E1780072FE1B /* ImageInterpolationView.swift */,
+				0842C1EF2D26E7640072FE1B /* ContextMenuView.swift */,
+				0842C1F12D26EEA90072FE1B /* CustomRowSwipeView.swift */,
 			);
 			path = ForReview;
 			sourceTree = "<group>";
@@ -146,7 +161,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0842C1DD2D26D3620072FE1B /* MultipleSelectionList.swift in Sources */,
+				0842C1EC2D26DCD20072FE1B /* ResultTypeDemo.swift in Sources */,
+				0842C1EE2D26E1780072FE1B /* ImageInterpolationView.swift in Sources */,
+				0842C1F02D26E7640072FE1B /* ContextMenuView.swift in Sources */,
 				0842C1DB2D26D3620072FE1B /* HotProspectsApp.swift in Sources */,
+				0842C1F22D26EEA90072FE1B /* CustomRowSwipeView.swift in Sources */,
+				0842C1EA2D26D9300072FE1B /* TabViewDemo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
