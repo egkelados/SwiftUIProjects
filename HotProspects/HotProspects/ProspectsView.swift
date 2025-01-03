@@ -13,6 +13,7 @@ struct ProspectsView: View {
     @Environment(\.modelContext) var context
     @Query(sort: \Prospects.name) var prospects: [Prospects]
     @State private var isShowingScan = false
+    @State private var selectedProspects = Set<Prospects>()
     enum FilterType {
         case none, contacted, uncontacted
     }
@@ -32,7 +33,7 @@ struct ProspectsView: View {
 
     var body: some View {
         NavigationStack {
-            List(prospects) { prospect in
+            List(prospects, selection: $selectedProspects) { prospect in
                 VStack(alignment: .leading) {
                     Text(prospect.name)
                         .font(.headline)
@@ -40,14 +41,45 @@ struct ProspectsView: View {
                     Text(prospect.emailAddress)
                         .foregroundStyle(.secondary)
                 }
+                .swipeActions {
+                    Button("Delete", systemImage: "trash", role: .destructive) {
+                        context.delete(prospect)
+                    }
+
+                    if prospect.isContacted {
+                        Button("Mark Uncontacted", systemImage: "person.crop.circle.badge.xmark") {
+                            prospect.isContacted.toggle()
+                        }
+                        .tint(.blue)
+
+                    } else {
+                        Button("Mark Uncontacted", systemImage: "person.crop.circle.fill.badge.checkmark") {
+                            prospect.isContacted.toggle()
+                        }
+                        .tint(.green)
+                    }
+                }
+                .tag(prospect)
             }
             .navigationTitle(title)
             .toolbar {
-                Button("Scan", systemImage: "qrcode.viewfinder") {
-                    isShowingScan = true
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button("Scan", systemImage: "qrcode.viewfinder") {
+                        isShowingScan = true
+                    }
+                }
+
+                ToolbarItem(placement: .topBarLeading) {
+                    EditButton()
+                }
+
+                if selectedProspects.isEmpty == false {
+                    ToolbarItem(placement: .bottomBar) {
+                        Button("Delete Selected", action: delete)
+                    }
                 }
             }
-            .sheet(isPresented: $isShowingScan){
+            .sheet(isPresented: $isShowingScan) {
                 CodeScannerView(codeTypes: [.qr], simulatedData: "Paul Some\nsome@gmail.com", completion: handleScan)
             }
         }
@@ -64,21 +96,26 @@ struct ProspectsView: View {
             }, sort: [SortDescriptor(\Prospects.name)])
         }
     }
-    
+
     func handleScan(result: Result<ScanResult, ScanError>) {
         isShowingScan = false
-        
+
         switch result {
         case .success(let success):
             let details = success.string.components(separatedBy: "\n")
             guard details.count == 2 else { return }
-            
+
             let person = Prospects(name: details[0], emailAddress: details[1], isContacted: false)
             context.insert(person)
         case .failure(let failure):
             print("Scanning failed: \(failure.localizedDescription)")
         }
-        
+    }
+
+    func delete() {
+        for prospect in selectedProspects {
+            context.delete(prospect)
+        }
     }
 }
 
