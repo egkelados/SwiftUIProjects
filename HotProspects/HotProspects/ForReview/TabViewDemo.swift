@@ -14,13 +14,14 @@ struct TabViewDemo: View {
             Button("Show Tab 2") {
                 selectedTab = "Two"
             }
-                .tabItem { Label("One", systemImage: "star") }
-                .tag("One")
-            
-            
-            Text("Tab 2")
-                .tabItem { Label("One", systemImage: "circle") }
-                .tag("Two")
+            .tabItem { Label("One", systemImage: "star") }
+            .tag("One")
+
+            Button("Show Tab 1") {
+                selectedTab = "One"
+            }
+            .tabItem { Label("Two", systemImage: "circle") }
+            .tag("Two")
         }
     }
 }

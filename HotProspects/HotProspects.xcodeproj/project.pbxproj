@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0819D0672D2D53C50075BA75 /* EditProspectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819D0662D2D53C50075BA75 /* EditProspectView.swift */; };
 		0842C1DB2D26D3620072FE1B /* HotProspectsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0842C1DA2D26D3620072FE1B /* HotProspectsApp.swift */; };
 		0842C1DD2D26D3620072FE1B /* MultipleSelectionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0842C1DC2D26D3620072FE1B /* MultipleSelectionList.swift */; };
 		0842C1DF2D26D3640072FE1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0842C1DE2D26D3640072FE1B /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0819D0662D2D53C50075BA75 /* EditProspectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProspectView.swift; sourceTree = "<group>"; };
 		0842C1D72D26D3620072FE1B /* HotProspects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotProspects.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0842C1DA2D26D3620072FE1B /* HotProspectsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotProspectsApp.swift; sourceTree = "<group>"; };
 		0842C1DC2D26D3620072FE1B /* MultipleSelectionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleSelectionList.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				0842C1DE2D26D3640072FE1B /* Assets.xcassets */,
 				0842C1E02D26D3640072FE1B /* Preview Content */,
 				088D07C92D27E43100833E22 /* ProspectsView.swift */,
+				0819D0662D2D53C50075BA75 /* EditProspectView.swift */,
 				088D07CB2D27E43A00833E22 /* MeView.swift */,
 				088D07CD2D27E44500833E22 /* ActualAppView.swift */,
 				088D07CF2D27E62C00833E22 /* Prospects.swift */,
@@ -198,6 +201,7 @@
 				0842C1F42D26F2A10072FE1B /* NotificationsDemo.swift in Sources */,
 				088D07CA2D27E43100833E22 /* ProspectsView.swift in Sources */,
 				0842C1EC2D26DCD20072FE1B /* ResultTypeDemo.swift in Sources */,
+				0819D0672D2D53C50075BA75 /* EditProspectView.swift in Sources */,
 				088D07CE2D27E44500833E22 /* ActualAppView.swift in Sources */,
 				0842C1EE2D26E1780072FE1B /* ImageInterpolationView.swift in Sources */,
 				0842C1F62D26F5530072FE1B /* PackageDependencyView.swift in Sources */,
