@@ -17,12 +17,11 @@ struct ContentView: View {
     @State private var isDragging = false
     var body: some View {
         VStack(spacing: 20) {
-            
             let dragGesture = DragGesture()
                 .onChanged { value in
                     offset = value.translation
                 }
-                .onEnded{ _ in
+                .onEnded { _ in
                     withAnimation {
                         offset = .zero
                         isDragging = false
@@ -30,8 +29,8 @@ struct ContentView: View {
                 }
             
             let pressGesture = LongPressGesture()
-                .onEnded{ value in
-                    withAnimation{
+                .onEnded { _ in
+                    withAnimation {
                         isDragging = true
                     }
                 }
@@ -97,6 +96,27 @@ struct ContentView: View {
     }
 }
 
+struct ContenntView: View {
+    @State private var offset = CGSize.zero
+    
+    var body: some View {
+        Text("Drag Me Demo")
+            .padding()
+            .background(Color.blue)
+            .offset(x: offset.width, y: offset.height)
+            .gesture(
+                DragGesture()
+                    .onChanged { gesture in
+                        offset = gesture.translation
+                    }
+                    .onEnded { _ in
+                        offset = .zero
+                    }
+            )
+            .border(Color.red, width: 2) // here the border indicates the original position of the Text Viuew
+    }
+}
+
 #Preview {
-    ContentView()
+    ContenntView()
 }
