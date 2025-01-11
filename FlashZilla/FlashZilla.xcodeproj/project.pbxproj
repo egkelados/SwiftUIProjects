@@ -19,6 +19,7 @@
 		0897F1772D2E8EE20091D1FE /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0897F1762D2E8EE20091D1FE /* Card.swift */; };
 		0897F1792D2E8FE50091D1FE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0897F1782D2E8FE50091D1FE /* CardView.swift */; };
 		08A1CFE62D31698A007BC571 /* Dragable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A1CFE52D31698A007BC571 /* Dragable.swift */; };
+		08A1CFE82D33143B007BC571 /*  EditCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A1CFE72D33143B007BC571 /*  EditCardsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		0897F1762D2E8EE20091D1FE /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		0897F1782D2E8FE50091D1FE /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		08A1CFE52D31698A007BC571 /* Dragable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dragable.swift; sourceTree = "<group>"; };
+		08A1CFE72D33143B007BC571 /*  EditCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " EditCardsView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				0897F15D2D2E61E30091D1FE /* FlashZillaApp.swift */,
 				0897F1742D2E8E770091D1FE /* ActualAppView.swift */,
 				0897F1762D2E8EE20091D1FE /* Card.swift */,
+				08A1CFE72D33143B007BC571 /*  EditCardsView.swift */,
 				0897F1782D2E8FE50091D1FE /* CardView.swift */,
 				0897F16B2D2E621B0091D1FE /* ForReview */,
 				0897F1612D2E61E40091D1FE /* Assets.xcassets */,
@@ -171,6 +174,7 @@
 			files = (
 				0897F1602D2E61E30091D1FE /* ContentView.swift in Sources */,
 				0897F1792D2E8FE50091D1FE /* CardView.swift in Sources */,
+				08A1CFE82D33143B007BC571 /*  EditCardsView.swift in Sources */,
 				0897F16D2D2E6D370091D1FE /* HitTestingView.swift in Sources */,
 				08A1CFE62D31698A007BC571 /* Dragable.swift in Sources */,
 				0897F16F2D2E77740091D1FE /* CombineDemo.swift in Sources */,
