@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0821C68B2D36A2D400D28421 /* ScrollViewEffectDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0821C68A2D36A2D400D28421 /* ScrollViewEffectDemoView.swift */; };
+		0821C68D2D36B5CB00D28421 /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0821C68C2D36B5CB00D28421 /* VisualEffectView.swift */; };
 		087B83CD2D35690B00979796 /* GeometryReaderDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087B83CC2D35690B00979796 /* GeometryReaderDemoView.swift */; };
 		087B83CF2D356BEF00979796 /* GeoReaderCoordinatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087B83CE2D356BEF00979796 /* GeoReaderCoordinatesView.swift */; };
 		08D3868B2D3515C400C47A8D /* LayoutAndGeometryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D3868A2D3515C400C47A8D /* LayoutAndGeometryApp.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		0821C68A2D36A2D400D28421 /* ScrollViewEffectDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewEffectDemoView.swift; sourceTree = "<group>"; };
+		0821C68C2D36B5CB00D28421 /* VisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectView.swift; sourceTree = "<group>"; };
 		087B83CC2D35690B00979796 /* GeometryReaderDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderDemoView.swift; sourceTree = "<group>"; };
 		087B83CE2D356BEF00979796 /* GeoReaderCoordinatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoReaderCoordinatesView.swift; sourceTree = "<group>"; };
 		08D386872D3515C400C47A8D /* LayoutAndGeometry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LayoutAndGeometry.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +89,7 @@
 				08D3869B2D3521EB00C47A8D /* CustomAlignmentGuideView.swift */,
 				08D3869D2D3548C700C47A8D /* AbsolutePositioningView.swift */,
 				0821C68A2D36A2D400D28421 /* ScrollViewEffectDemoView.swift */,
+				0821C68C2D36B5CB00D28421 /* VisualEffectView.swift */,
 				087B83CC2D35690B00979796 /* GeometryReaderDemoView.swift */,
 				087B83CE2D356BEF00979796 /* GeoReaderCoordinatesView.swift */,
 			);
@@ -165,6 +168,7 @@
 			files = (
 				0821C68B2D36A2D400D28421 /* ScrollViewEffectDemoView.swift in Sources */,
 				087B83CD2D35690B00979796 /* GeometryReaderDemoView.swift in Sources */,
+				0821C68D2D36B5CB00D28421 /* VisualEffectView.swift in Sources */,
 				08D3869C2D3521EB00C47A8D /* CustomAlignmentGuideView.swift in Sources */,
 				08D3869A2D35197300C47A8D /* HowLayoutWorksDemoView.swift in Sources */,
 				087B83CF2D356BEF00979796 /* GeoReaderCoordinatesView.swift in Sources */,

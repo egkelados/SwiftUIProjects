@@ -45,13 +45,14 @@ struct ContainerRelativeFrameView: View {
                     .resizable()
                     .scaledToFit()
                     .containerRelativeFrame(.horizontal) { size, _ in
-                        size * 0.8
+                        size * 0.4
                     }
             }
         }
+        .scrollTargetBehavior(.viewAligned)
     }
 }
 
 #Preview {
-    GeometryReaderDemoView()
+    ContainerRelativeFrameView()
 }
