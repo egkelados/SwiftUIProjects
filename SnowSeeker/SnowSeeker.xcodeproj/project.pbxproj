@@ -11,6 +11,7 @@
 		0859410A2D378D9F00377692 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085941092D378D9F00377692 /* ContentView.swift */; };
 		0859410C2D378DA000377692 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0859410B2D378DA000377692 /* Assets.xcassets */; };
 		0859410F2D378DA000377692 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0859410E2D378DA000377692 /* Preview Assets.xcassets */; };
+		085941172D37918600377692 /* PromptsWithOptionalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085941162D37918600377692 /* PromptsWithOptionalsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		085941092D378D9F00377692 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0859410B2D378DA000377692 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0859410E2D378DA000377692 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		085941162D37918600377692 /* PromptsWithOptionalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptsWithOptionalsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				085941072D378D9F00377692 /* SnowSeekerApp.swift */,
-				085941092D378D9F00377692 /* ContentView.swift */,
+				085941152D37916300377692 /* ForReview */,
 				0859410B2D378DA000377692 /* Assets.xcassets */,
 				0859410D2D378DA000377692 /* Preview Content */,
 			);
@@ -65,6 +67,15 @@
 				0859410E2D378DA000377692 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		085941152D37916300377692 /* ForReview */ = {
+			isa = PBXGroup;
+			children = (
+				085941092D378D9F00377692 /* ContentView.swift */,
+				085941162D37918600377692 /* PromptsWithOptionalsView.swift */,
+			);
+			path = ForReview;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0859410A2D378D9F00377692 /* ContentView.swift in Sources */,
+				085941172D37918600377692 /* PromptsWithOptionalsView.swift in Sources */,
 				085941082D378D9F00377692 /* SnowSeekerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
