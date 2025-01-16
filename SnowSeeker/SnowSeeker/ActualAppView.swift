@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ActualAppView: View {
+    @State private var favorites = Favorites()
     @State private var searchText = ""
     let resorts: [Resort] = Bundle.main.decode("resorts.json")
 
@@ -43,6 +44,13 @@ struct ActualAppView: View {
                             Text("\(res.runs)")
                                 .foregroundStyle(.secondary)
                         }
+                        
+                        if favorites.contains(res) {
+                            Spacer()
+                            Image(systemName: "heart.fill")
+                                .accessibilityLabel("This is a favorite resort")
+                                .foregroundStyle(.red)
+                        }
                     }
                 }
             }
@@ -54,6 +62,7 @@ struct ActualAppView: View {
         } detail: {
             WelcomeView()
         }
+        .environment(favorites)
     }
 }
 
