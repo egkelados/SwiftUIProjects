@@ -20,6 +20,9 @@
 		0897F1792D2E8FE50091D1FE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0897F1782D2E8FE50091D1FE /* CardView.swift */; };
 		08A1CFE62D31698A007BC571 /* Dragable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A1CFE52D31698A007BC571 /* Dragable.swift */; };
 		08A1CFE82D33143B007BC571 /*  EditCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A1CFE72D33143B007BC571 /*  EditCardsView.swift */; };
+		08CCEB252D3E9776003AAB06 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CCEB242D3E9776003AAB06 /* CardViewModel.swift */; };
+		08CCEB272D3E9A4E003AAB06 /* EditCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CCEB262D3E9A4E003AAB06 /* EditCardViewModel.swift */; };
+		08CCEB292D3EA12D003AAB06 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CCEB282D3EA12D003AAB06 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		0897F1782D2E8FE50091D1FE /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		08A1CFE52D31698A007BC571 /* Dragable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dragable.swift; sourceTree = "<group>"; };
 		08A1CFE72D33143B007BC571 /*  EditCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " EditCardsView.swift"; sourceTree = "<group>"; };
+		08CCEB242D3E9776003AAB06 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		08CCEB262D3E9A4E003AAB06 /* EditCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCardViewModel.swift; sourceTree = "<group>"; };
+		08CCEB282D3EA12D003AAB06 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +77,10 @@
 			children = (
 				0897F15D2D2E61E30091D1FE /* FlashZillaApp.swift */,
 				0897F1742D2E8E770091D1FE /* ActualAppView.swift */,
+				08CCEB262D3E9A4E003AAB06 /* EditCardViewModel.swift */,
+				08CCEB282D3EA12D003AAB06 /* DataManager.swift */,
 				0897F1762D2E8EE20091D1FE /* Card.swift */,
+				08CCEB242D3E9776003AAB06 /* CardViewModel.swift */,
 				08A1CFE72D33143B007BC571 /*  EditCardsView.swift */,
 				0897F1782D2E8FE50091D1FE /* CardView.swift */,
 				0897F16B2D2E621B0091D1FE /* ForReview */,
@@ -175,11 +184,14 @@
 				0897F1602D2E61E30091D1FE /* ContentView.swift in Sources */,
 				0897F1792D2E8FE50091D1FE /* CardView.swift in Sources */,
 				08A1CFE82D33143B007BC571 /*  EditCardsView.swift in Sources */,
+				08CCEB292D3EA12D003AAB06 /* DataManager.swift in Sources */,
 				0897F16D2D2E6D370091D1FE /* HitTestingView.swift in Sources */,
+				08CCEB272D3E9A4E003AAB06 /* EditCardViewModel.swift in Sources */,
 				08A1CFE62D31698A007BC571 /* Dragable.swift in Sources */,
 				0897F16F2D2E77740091D1FE /* CombineDemo.swift in Sources */,
 				0897F1752D2E8E770091D1FE /* ActualAppView.swift in Sources */,
 				0897F15E2D2E61E30091D1FE /* FlashZillaApp.swift in Sources */,
+				08CCEB252D3E9776003AAB06 /* CardViewModel.swift in Sources */,
 				0897F1732D2E8A1C0091D1FE /* AccesibilityStandardView.swift in Sources */,
 				0897F1712D2E89830091D1FE /* MovingAppToBackgroundView.swift in Sources */,
 				0897F1772D2E8EE20091D1FE /* Card.swift in Sources */,

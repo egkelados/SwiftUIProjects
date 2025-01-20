@@ -70,7 +70,6 @@ struct CardView: View {
                 }
             }
         )
-
         .onTapGesture {
             isShowingAnswer.toggle()
         }
