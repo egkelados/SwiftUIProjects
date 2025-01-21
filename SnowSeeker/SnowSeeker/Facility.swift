@@ -27,20 +27,20 @@ struct Facility: Identifiable {
         "Family": "This resort is populare with families",
     ]
 
-    var description: String {
-        if let descriptionName = descriptions[name] {
-            descriptionName
-        }else {
+    var icon: some View {
+        if let iconName = icons[name] {
+            return Image(systemName: iconName)
+                .accessibilityLabel(name)
+                .foregroundStyle(.secondary)
+
+        } else {
             fatalError("Unkown facility type: \(name)")
         }
     }
 
-    var icon: some View {
-        if let iconName = icons[name] {
-            Image(systemName: iconName)
-                .accessibilityLabel(name)
-                .foregroundStyle(.secondary)
-
+    var description: String {
+        if let descriptionName = descriptions[name] {
+            descriptionName
         } else {
             fatalError("Unkown facility type: \(name)")
         }
